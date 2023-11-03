@@ -1,0 +1,398 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #040720;
+
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header {
+    display: flex;
+    position:relative;
+    width: 100%;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.5) ;
+    backdrop-filter: blur(20px);
+    padding: 60px 3%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+}
+
+.Logo {
+    font-size: 1.7em;
+    user-select: none;
+}
+
+.Logo h2 {
+    font-weight: 700;
+    color: #fff;
+}
+
+.Logo span {
+    color: #3090C7;
+}
+
+.Navbar-links {
+    list-style-type: none;
+}
+
+.Navbar-links li {
+    display: inline-block;
+    padding: 0px 40px;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.Navbar-links a {
+    color: white;
+    transition: all .3s ease 0s;
+}
+
+
+.Navbar-links a:hover,
+.Navbar-links a.active {
+    color: #3090C7;
+}
+
+
+
+.Profile-Icon {
+    font-size: 2.3em;
+    position: relative;
+}
+
+.Profile-Icon a {
+    color: white;
+    transition: all .3s ease 0s;
+}
+
+.Profile-Icon a::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #3090C7;
+    box-shadow: 0px 0px 1px #3090C7;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -5px;
+    right: 0%;
+    transition: .4s;
+}
+.Profile-Icon a:hover,
+.Profile-Icon a.active {
+    color: #3090C7;
+}
+
+.Profile-Icon a:hover::after {
+    color: #3090C7;
+    width: 100%;
+    left: 0;
+}
+
+.Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.Wrapper {
+    position: relative;
+    width: 750px;
+    height: 450px;
+    background: transparent;
+    border: 4px solid #3090C7;
+    overflow: hidden;
+    box-shadow: 0 0 25px #3090C7;
+}
+
+.Wrapper .Form-Box {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Wrapper .Form-Box.Login {
+    left: 0;
+    padding: 0 60px 0 40px;
+}
+
+.Wrapper .Form-Box.Login .animation {
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+    transition: .7s ease;
+    transition-delay: calc(.1s * var(--j));
+}
+
+.Wrapper.active .Form-Box.Login .animation {
+    transform: translateX(-120%);
+    transition-delay: calc(.1s * var(--i));
+    opacity: 0;
+    filter: blur(10px);
+}
+
+.Wrapper .Form-Box.Register {
+    right: 0;
+    padding: 0 40px 0 60px;
+    pointer-events: none;
+}
+
+.Wrapper.active .Form-Box.Register {
+    pointer-events: auto;
+}
+
+.Wrapper .Form-Box.Register .animation {
+    transform: translateX(120%);
+    transition: .7s ease;
+    opacity: 0;
+    filter: blur(10px);
+    transition-delay: calc(.1s * var(--j));
+}
+
+.Wrapper.active .Form-Box.Register .animation {
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+    transition-delay: calc(.1s * var(--i));
+}
+
+.Form-Box h2 {
+    font-size: 32px;
+    color: #fff;
+    text-align: center;
+}
+
+.Form-Box .Input-Box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 25px 0;
+}
+
+.Input-Box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #fff;
+    transition: .5s;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    padding-right: 20px;
+}
+
+.Input-Box input:focus,
+.Input-Box input:valid {
+    border-bottom-color: #3090C7 ;
+}
+
+.Input-Box label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.Input-Box input:focus~label,
+.Input-Box input:valid~label {
+    top: -5px;
+    color: #3090C7;
+}
+
+.Input-Box ion-icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #fff;
+    transition: .5s;
+}
+
+.Input-Box input:focus~ion-icon,
+.Input-Box input:valid~ion-icon {
+    color: #3090C7;
+}
+
+.Btn-Login {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    border: 2px solid #3090C7;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.Btn-Login::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 300%;
+    background: linear-gradient(#040720, #3090C7, #040720, #3090C7);
+    z-index: -1;
+    transition: .5s;
+}
+
+.Btn-Login:hover::before {
+    top: 0;
+}
+
+.Form-Box .Logreg-Link {
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    margin: 20px 0 10px;
+}
+
+.Logreg-Link p a {
+    color: #3090C7;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.Logreg-Link p a:hover {
+    text-decoration: underline;
+}
+
+.Wrapper .Information-Text {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.Wrapper .Information-Text.Login {
+    right: 0;
+    text-align: right;
+    padding: 0 40px 60px 150px;
+}
+
+.Wrapper .Information-Text.Login .animation {
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+    transition: .7s ease;
+    transition-delay: calc(.1s * var(--j));
+}
+
+.Wrapper.active .Information-Text.Login .animation {
+    transform: translateX(120%);
+    transition-delay: calc(.1s * var(--i));
+    opacity: 0;
+    filter: blur(10px);
+}
+
+.Wrapper .Information-Text.Register {
+    left: 0;
+    text-align: left;
+    padding: 0 150px 0 40px;
+    pointer-events: none;
+}
+
+.Wrapper.active .Information-Text.Register {
+    pointer-events: auto;
+}
+
+.Wrapper .Information-Text.Register .animation {
+    transform: translateX(-120%);
+    opacity:0 ;
+    filter: blur(10px);
+    transition: .7s ease;
+    transition-delay: calc(.1s * var(--j));
+}
+
+.Wrapper.active .Information-Text.Register .animation {
+    transform: translateX(0);
+    opacity:1 ;
+    filter: blur(0);
+    transition-delay: calc(.1s * var(--i));
+}
+
+.Information-Text h2 {
+    font-size: 36px;
+    color: #fff;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+.Information-Text p {
+    font-size: 16px;
+    color: #fff;
+
+}
+
+.Wrapper .Animation {
+    position: absolute;
+    top: -4px;
+    right: 0;
+    width: 850px;
+    height: 600px;
+    background: linear-gradient(45deg, #040720, #3090C7);
+    transform: rotate(10deg) skewY(40deg);
+    transform-origin: bottom right;
+    border-bottom: 3px solid #3090C7;
+    transition: 1.5s ease;
+    transition-delay: 1.6s;
+}
+
+.Wrapper.active .Animation {
+    transform: rotate(0) skewY(0);
+    transition-delay: .5s;
+}
+
+.Wrapper .Animation2 {
+    position: absolute;
+    top: 100%;
+    left: 250px;
+    width: 850px;
+    height: 700px;
+    background: #040720;
+    transform: rotate(0) skewY(0);
+    transform-origin: bottom left;
+    border-top: 3px solid #3090C7;
+    transition: 1.5s ease;
+    transition-delay: .5s;
+}
+
+.Wrapper.active .Animation2 {
+    transform: rotate(-11deg) skewY(-41deg);
+    transition-delay: 1.2s;
+}

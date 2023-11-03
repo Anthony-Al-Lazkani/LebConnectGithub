@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './Project.css';
+import './App.css';
+import './components/footer.js'
+
 
 class App extends React.Component {
   render() {
@@ -30,7 +32,11 @@ class App extends React.Component {
           <h2>Leb<span>Connect</span></h2>
           <p>Your Ultimate Guide Through Lebanon!</p>
         </section>
+<footer className="footer">
+          <p>© 2023 LebConnect</p>
+        </footer>
       </div>
+
     );
   }
 }
