@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './App.css';
+import './Project.css';
 
 class App extends React.Component {
   render() {
