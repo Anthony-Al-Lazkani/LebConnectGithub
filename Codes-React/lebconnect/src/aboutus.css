@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background: #040720;
+  }
+  
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Header styles */
+  .header {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 80px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    padding: 60px 3%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .Logo {
+    font-size: 1.7em;
+    user-select: none;
+  }
+  
+  .Logo h2 {
+    font-weight: 700;
+    color: #fff;
+  }
+  
+  .Logo span {
+    color: #3090C7;
+  }
+  
+  .Navbar-links {
+    list-style-type: none;
+  }
+  
+  .Navbar-links li {
+    display: inline-block;
+    padding: 0px 40px;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  
+  .Navbar-links a {
+    color: white;
+    transition: all .3s ease 0s;
+  }
+  
+  .Navbar-links a:hover,
+  .Navbar-links a.active {
+    color: #3090C7;
+  }
+  
+  .Profile-Icon {
+    font-size: 2.3em;
+    position: relative;
+  }
+  
+  .Profile-Icon a {
+    color: white;
+    transition: all .3s ease 0s;
+  }
+  
+  .Profile-Icon a::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #3090C7;
+    box-shadow: 0px 0px 1px #3090C7;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -5px;
+    right: 0%;
+    transition: .4s;
+  }
+  
+  .Profile-Icon a:hover,
+  .Profile-Icon a.active {
+    color: #3090C7;
+  }
+  
+  .Profile-Icon a:hover::after {
+    color: #3090C7;
+    width: 100%;
+    left: 0;
+  }
+  
+  /* About Us Page-specific styles */
+  .About-Us-Page {
+    background: #040720;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .About-Us-Page h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+  }
+  
+  .About-Us-Page p {
+    font-size: 16px;
+  }

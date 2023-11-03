@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import {Routes} from 'react-router-dom';
+import {Route} from 'react-router-dom';
 import './App.css';
 
 class App extends React.Component {
@@ -17,7 +19,7 @@ class App extends React.Component {
               <li><a href="index.html" className="active">Home</a></li>
               <li><a href="#">News</a></li>
               <li><a href="#">Tourism</a></li>
-              <li><a href="#">About</a></li>
+              <li><a href="aboutus.js">About</a></li>
             </ul>
           </nav>
           <div className="Profile-Icon">
