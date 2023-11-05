@@ -1,0 +1,31 @@
+.section-white {
+    padding: 70px 0;
+    display: flex;
+    justify-content: space-between; /* To evenly space the containers */
+}
+.container{
+    flex: 1;
+    max-width: 30%;
+}
+.container-wrapper {
+    display: flex;
+  }
+.custom-h3{
+    text-align: center;
+    color: #3090C7;
+    font-family: 'Poppins';
+    font-size:x-large;
+}
+.team-item{
+    background-color: #3090C7;
+    text-align: justify;
+    margin: 30px; /* space between l containers */
+    padding: 60px 20px;
+    border-radius: 8px 8px;
+
+
+}
+.team-item:hover{
+    background-color: #1593db;
+    color:white
+}
