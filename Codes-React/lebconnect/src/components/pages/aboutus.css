@@ -5,7 +5,7 @@
 }
 .container{
     flex: 1;
-    max-width: 30%;
+    max-width: 50%;
 }
 .container-wrapper {
     display: flex;
@@ -19,7 +19,7 @@
 .team-item{
     background-color: #3090C7;
     text-align: justify;
-    margin: 30px; /* space between l containers */
+    margin: 5rem; /* space between l containers */
     padding: 60px 20px;
     border-radius: 8px 8px;
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import './aboutus.css';
+import 'font-awesome/css/font-awesome.min.css';
 function AboutUs() {
   return (
     <section className="section-white">
