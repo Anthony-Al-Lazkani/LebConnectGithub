@@ -13,7 +13,7 @@ function LoginSignup(){
 
     return (
         <div className="container">
-            <div className="header">
+            <div className="headerr">
                 <div className="text">{action}</div>
                 <div className="underline"></div>
             </div>
