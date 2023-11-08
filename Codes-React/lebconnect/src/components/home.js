@@ -2,7 +2,7 @@ import React from "react";
 import './home.css'
 
 
-function home() {
+function Home() {
     return (
 
         <section className="Front-Page">
@@ -21,6 +21,6 @@ function home() {
     );
 }
           
-export default home;
+export default Home;
 
   

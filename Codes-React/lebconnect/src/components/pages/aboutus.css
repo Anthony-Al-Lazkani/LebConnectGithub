@@ -2,6 +2,7 @@
     padding: 70px 0;
     display: flex;
     justify-content: space-between; /* To evenly space the containers */
+    width: 100%;
 }
 .container{
     flex: 1;
@@ -9,6 +10,8 @@
 }
 .container-wrapper {
     display: flex;
+    width: 100%;
+    background: none
   }
 .custom-h3{
     text-align: center;
@@ -16,16 +19,17 @@
     font-family: 'Poppins';
     font-size:x-large;
 }
-.team-item{
+.team-item{ 
     background-color: #3090C7;
-    text-align: justify;
+    text-align: center;
     margin: 5rem; /* space between l containers */
     padding: 60px 20px;
-    border-radius: 8px 8px;
+    border-radius: 25px;
+    height: 400px;
+    width: 400px;
 
 
 }
 .team-item:hover{
     background-color: #1593db;
-    color:white
 }

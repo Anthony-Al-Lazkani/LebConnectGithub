@@ -25,11 +25,11 @@ function LoginSignup(){
                 
                 <div className="input">
                     <img src= {email_icon}  alt="" />
-                    <input type="email" placeholder="Email" />
+                    <input type="email" placeholder="Email" required/>
                 </div>
                 <div className="input">
                     <img src= {password_icon}  alt="" />
-                    <input type="password" placeholder="Password" />
+                    <input type="password" placeholder="Password" required/>
                 </div>
             </div>
             {action==="Sign Up" ? <div></div> : <div className="forgot-password">Forgot Password? <span>Click Here!</span></div> }
