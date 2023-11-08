@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom';
 import home from './home';
 
 
-function navbar(){
+function Navbar(){
     const [click, setClick] = useState(false);
 
     const hadleClick = () => setClick(!click);
@@ -52,7 +52,7 @@ function navbar(){
                         </Link>
                     </li>
                     <li class='Navbar-links'>
-                        <Link to='/signup' className='Navbar-links' onClick={closeMobileMenu}>
+                        <Link to='/LoginSignup' className='Navbar-links' onClick={closeMobileMenu}>
                           SignUp
                         </Link>
                     </li>
@@ -73,4 +73,4 @@ function navbar(){
 
 }
 
-export default navbar;
+export default Navbar;
