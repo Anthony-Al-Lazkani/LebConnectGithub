@@ -1,7 +1,8 @@
 import React from 'react';
 import '../../App.css'
+import Footer from '../footer.js'
 import Home from '../home';
-import Footer from '../footer'
+
 
 export default function Homepage(){
     return (
