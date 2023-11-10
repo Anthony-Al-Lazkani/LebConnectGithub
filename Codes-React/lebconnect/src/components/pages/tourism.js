@@ -1,19 +1,14 @@
 
 import React from 'react';
+import SearchBar from '../SearchBar.js';
+import BookData from "../../Data.json";
+
 
 function tourism() {
   return (
-    <div>
-      <h1>Lebanon Tourism</h1>
-      <p>Welcome to Lebanon, a beautiful country located in the Middle East. Here are some of the top tourist attractions:</p>
-      <ul>
-        <li>Jeita Grotto</li>
-        <li>Byblos Castle</li>
-        <li>Beirut Souks</li>
-        <li>Harissa</li>
-        <li>Cedars of God</li>
-      </ul>
-    </div>
+      <div style={{position: 'absolute',top: '20px', right: '0'}}>
+        <SearchBar placeholder="Enter a Book Name..." data={BookData}/>
+      </div>
   );
 }
 

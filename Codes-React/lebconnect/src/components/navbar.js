@@ -20,7 +20,7 @@ function Navbar(){
           rel="stylesheet"
         />
             <nav className='Navbar'>
-                <header className='header'>
+                <header className='header-navbar'>
                     <div class='Logo'>
             
                 <Link to='/' className='navbar-logo'>
