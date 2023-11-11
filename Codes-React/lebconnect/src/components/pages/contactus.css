@@ -4,7 +4,6 @@
         left: 50%;
         transform: translate(-50%, -50%);
         width: 60%; /* Increase the width */
-        background-color: #f0f8ff;
         padding: 5px; /* Increase the padding */
         border-radius: 8px;
         box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.1);
@@ -15,13 +14,13 @@
   
   .text-2xl {
     font-size: 28px; /* Increase the font size */
-    color: #00008b;
+    color: #fff;
     margin-bottom: 20px;
   }
   
   .text-sm {
     font-size: 16px; /* Increase the font size */
-    color: #00008b;
+    color: #3090C7;
     margin-bottom: 5px;
   }
   
@@ -54,4 +53,7 @@
   
   form button:hover {
     background-color: #1e31ff;
+  }
+  p{
+    color: #3090C7;
   }
