@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './LoginSignup.css';
 import { AiOutlineMail} from 'react-icons/ai'; // Import icons
 import {BsEye, BsEyeSlash} from 'react-icons/bs';
+import { Link } from 'react-router-dom'; // Import Link
 
 
 function LoginSignup() {
@@ -72,6 +73,13 @@ function LoginSignup() {
                 </div>
 
             </div>
+            <div className='Login-Button-Box'>
+        <div className='Login-Link'>
+          <p>Already have an account?</p>
+          <Link to="/login">Login</Link> {/* Add this line */}
+        </div>
+      </div>
+
         </div>
     );
 }

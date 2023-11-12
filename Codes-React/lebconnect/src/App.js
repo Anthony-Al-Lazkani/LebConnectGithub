@@ -7,6 +7,10 @@ import ContactUs from './components/pages/contactus'; // Corrected here
 import AboutUs from './components/pages/aboutus'; // Corrected here
 import Tourism from './components/pages/tourism'; // Corrected here
 import LoginSignup from './components/pages/LoginSignup/LoginSignup';
+import Login from './components/pages/LoginSignup/Login';
+import Footer from './components/footer';
+
+
 
 
 function App() {
@@ -19,7 +23,9 @@ function App() {
         <Route path='/AboutUs' element={<AboutUs />} />
         <Route path='/ContactUs' element={<ContactUs />} />
         <Route path='/Tourism' element={<Tourism />} />
+        <Route path='/Login' element={<Login />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
