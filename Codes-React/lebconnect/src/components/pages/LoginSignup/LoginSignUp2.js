@@ -4,7 +4,7 @@ import { AiOutlineMail} from 'react-icons/ai'; // Import icons
 import {BsEye, BsEyeSlash} from 'react-icons/bs';
 
 
-function LoginSignup() {
+function LoginSignup2() {
     
         const [passwordVisible, setPasswordVisible] = useState(false);
 
@@ -17,29 +17,23 @@ function LoginSignup() {
     return (
         <div className='container'>
             <div className='Login-Text'>
-                <h2>Sign Up</h2>
+                <h2>Login</h2>
                 <div className='Underline'></div>
             </div>
             <div className='Input-Box'>
                 <div className='FirstName-LastName'>
                     <div className='FirstName'>
                         <h3>First Name</h3>
-                        <input type='text' placeholder='First Name...' className='FLInput' required maxLength={30}></input>
+                        <input type='text' placeholder='First Name...' className='FLInput' required></input>
                     </div>
                     <div className='LastName'>
                         <h3>Last Name</h3>
-                        <input type='text' placeholder='Last Name...' className='FLInput' required maxLength={30}></input>
+                        <input type='text' placeholder='Last Name...' className='FLInput' required></input>
                     </div>
                 </div>
-                <div className='FirstName-LastName'>
-                    <div className='FirstName'>
-                        <h3>Age</h3>
-                        <input type='number' placeholder='Age...' className='FLInput' required min={0} max={110}></input>
-                    </div>
-                    <div className='LastName'>
-                        <h3>Phone Number</h3>
-                        <input type='tel' placeholder='Phone Number...' className='FLInput' required></input>
-                    </div>
+                <div className='Age-Box'>
+                    <h3>Age</h3>
+                    <input type='age' placeholder='Age...'></input>
                 </div>
 
                 <div className='Date-Box'>
@@ -61,7 +55,7 @@ function LoginSignup() {
                             <BsEyeSlash onClick={togglePasswordVisibility} />
                         )}
                     </div>
-                    <input type= {passwordVisible ? 'text' : 'password'} placeholder='Password...' className='Email-Input' required maxLength={50}></input>
+                    <input type= {passwordVisible ? 'text' : 'password'} placeholder='Password...' className='Email-Input' required></input>
                 </div>
 
 
@@ -77,4 +71,4 @@ function LoginSignup() {
 }
 
 
-export default LoginSignup;
+export default LoginSignup2;
