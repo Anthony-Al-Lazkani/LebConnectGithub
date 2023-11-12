@@ -117,11 +117,12 @@ function Signup() {
                             <Link to="/login" className='Login-Link-reference'>Login</Link> {/* Add this line */}
                         </div>
 
+                    </div> 
+                    <div className='Login-Button-Box'>
+                    <div className='Login-Button'>
+                        <button>SignUp</button>
                     </div>
-
-
-            
-                            <input type="submit" onClick={signup} />
+                </div>
                 
                 </div>
             </form>
