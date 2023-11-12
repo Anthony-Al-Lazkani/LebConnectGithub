@@ -6,17 +6,16 @@ function Home() {
     return (
 
         <section className="Front-Page">
-            <h1 className="Front-Page-Header">Welcome to <br /></h1>
-            <h2>Leb<span>Connect</span></h2>
-            <p>Your Ultimate Guide Through Lebanon!</p>
-            <script
-                type="module"
-                src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-            ></script>
-            <script
-                nomodule
-                src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-            ></script>
+            <div className="Front-Page-Content">
+                <h1>WELCOME TO LEBANON</h1>
+                <p>Enrich your vacation with tours full of delicious food, places, and elegent hotels,
+                    <br></br>Press the bell icon to learn more.
+                </p>
+                <div>
+                    <button type="button"><span></span>LEARN MORE</button>
+                    <button type="button"><span></span>SUBSCRIBE</button>
+                </div>
+            </div>
         </section>
     );
 }

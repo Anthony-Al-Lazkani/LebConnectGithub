@@ -7,7 +7,7 @@
     border: 5px solid #3090c9;
     padding-bottom: 30px;
     width: 600px;
-    height: 750px;
+    height: 770px;
     border-radius: 25px;
     margin-bottom: 150px;
 }
@@ -256,8 +256,7 @@ h3 {
 
   .Login-Link-reference {
     font-size: .9em;
-    font-size: .9em;
-    font-weight: 600;
+    font-weight: 400;
     font-style: italic;
     transition: .4s;
   }
