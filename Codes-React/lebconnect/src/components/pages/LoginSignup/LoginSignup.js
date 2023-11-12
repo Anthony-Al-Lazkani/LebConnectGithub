@@ -39,7 +39,7 @@ function LoginSignup() {
                     </div>
                     <div className='LastName'>
                         <h3>Phone Number</h3>
-                        <input type='tel' placeholder='Phone Number...' className='FLInput' required></input>
+                        <input type='tel' placeholder='Phone Number...' className='FLInput' required maxLength={30}></input>
                     </div>
                 </div>
 
@@ -52,17 +52,32 @@ function LoginSignup() {
                     <div className='Email-Icon'>
                         <AiOutlineMail />
                     </div>
-                    <input type='email' placeholder='Email...' className='Email-Input' required></input>
+                    <input type='email' placeholder='Email...' className='Email-Input' required maxLength={40}></input>
                 </div>
                 <div className='Email-Box'>
-                    <div className='Email-Icon'>
+                    <div className='Password-Icon'>
                         {passwordVisible ? (
                             <BsEye onClick={togglePasswordVisibility} />
                         ) : (
                             <BsEyeSlash onClick={togglePasswordVisibility} />
                         )}
                     </div>
-                    <input type= {passwordVisible ? 'text' : 'password'} placeholder='Password...' className='Email-Input' required maxLength={50}></input>
+                    
+                    <input type= {passwordVisible ? 'text' : 'password'} placeholder='Password...' className='Password-Input' required maxLength={70}></input>
+                    <div className='Password-Icon'>
+                        {passwordVisible ? (
+                            <BsEye onClick={togglePasswordVisibility} />
+                        ) : (
+                            <BsEyeSlash onClick={togglePasswordVisibility} />
+                        )}
+                    </div>
+                    
+                    <input type= {passwordVisible ? 'text' : 'password'} placeholder='Confirm Password...' className='Email-Input' required maxLength={70}></input>
+                    <div className='Login-Link'>
+                        <p>Already have an account?</p>
+                        <Link to="/login" className='Login-Link-reference'>Login</Link> {/* Add this line */}
+                    </div>
+                
                 </div>
 
 
@@ -73,12 +88,8 @@ function LoginSignup() {
                 </div>
 
             </div>
-            <div className='Login-Button-Box'>
-        <div className='Login-Link'>
-          <p>Already have an account?</p>
-          <Link to="/login">Login</Link> {/* Add this line */}
-        </div>
-      </div>
+            
+
 
         </div>
     );

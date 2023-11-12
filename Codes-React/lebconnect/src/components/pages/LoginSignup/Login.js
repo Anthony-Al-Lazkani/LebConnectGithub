@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './LoginSignup.css';
+import './Login.css';
 import { AiOutlineMail} from 'react-icons/ai'; // Import icons
 import {BsEye, BsEyeSlash} from 'react-icons/bs';
 import { Link } from 'react-router-dom';
@@ -40,28 +40,28 @@ function LoginSignup() {
 
 
     return (
-        <div className='container'>
-            <div className='Login-Text'>
+        <div className='container-Login'>
+            <div className='Login-Text-Login'>
                 <h2>Login</h2>
-                <div className='Underline'></div>
+                <div className='Underline-Login'></div>
             </div>
-            <div className='Input-Box'>
-                <div className='Email-Box'>
-                    <div className='Email-Icon'>
+            <div className='Input-Box-Login'>
+                <div className='Email-Box-Login'>
+                    <div className='Email-Icon-Login'>
                         <AiOutlineMail />
                     </div>
-                    <input type='email' placeholder='Email...' className='Email-Input' required></input>
+                    <input type='email' placeholder='Email...' className='Email-Input-Login' required maxLength={35}></input>
                 </div>
-                <div className='Password-Box'>
+                <div className='Password-Box-Login'>
                     <form onSubmit={handleSubmit}>
-                        <div className='Password-Icon'>
+                        <div className='Password-Icon-Login'>
                                 {passwordVisible ? (
                                     <BsEye onClick={togglePasswordVisibility} />
                                 ) : (
                                     <BsEyeSlash onClick={togglePasswordVisibility} />
                                 )}
                             </div>
-                            <input type= {passwordVisible ? 'text' : 'password'} placeholder='Password...' className='Password-Input' required maxLength={50} onChange={(e) => setPassword(e.target.value)}></input>
+                            <input type= {passwordVisible ? 'text' : 'password'} maxLength={70} placeholder='Password...' className='Password-Input-Login' required maxLength={50} onChange={(e) => setPassword(e.target.value)}></input>
                             {passwordError && <div style={{ color: 'red', marginTop: '-16px', marginBottom: '16px' }}>{passwordError}</div>}
                             <div className='Account'>
                                 <p>Don't have an account ?</p>

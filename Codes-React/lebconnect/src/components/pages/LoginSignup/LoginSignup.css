@@ -7,8 +7,9 @@
     border: 5px solid #3090c9;
     padding-bottom: 30px;
     width: 600px;
-    height: 670px;
+    height: 750px;
     border-radius: 25px;
+    margin-bottom: 150px;
 }
 
 .Login-Text {
@@ -34,6 +35,7 @@
     display: flex;
     width: 25%;
     margin: 10px 38%;
+    animation: slide-Signup 2s 1;
 }
 
 .Input-Box {
@@ -142,12 +144,40 @@ h3 {
     padding: 5px;
 }
 
+.Password-Input {
+    width: 87%;
+    height: 45px;
+    border-radius: 10px;
+    border: 2px solid #3090c9;
+    display: flex;
+    align-items: center;
+    /* margin: auto; */
+    background: #eaeaea;
+    border: none;
+    font-size: 1.1em;
+    font-weight: 300;
+    margin-top: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
 
 .Email-Icon {
     display: flex;
     position: absolute;
     right: 5%;
     top: 23%;
+    font-size: 28px;
+    align-items: center;
+    justify-content: center; 
+    color: white;
+}
+
+.Password-Icon {
+    display: flex;
+    position: absolute;
+    right: 5%;
+    top: 30%;
     font-size: 28px;
     align-items: center;
     justify-content: center; 
@@ -166,6 +196,9 @@ h3 {
     height: 100%;
     left: 0;
 }
+
+
+
 
 
 .Login-Button button {
@@ -203,6 +236,71 @@ h3 {
     }
     100% {
       border-color: #3090c9; /* Back to Red */
+    }
+  }
+
+
+  .Login-Link {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+
+  .Login-Link p {
+    font-size: .9em;
+    color: #fff;
+    font-weight: 400;
+  }
+
+  .Login-Link-reference {
+    font-size: .9em;
+    font-size: .9em;
+    font-weight: 600;
+    font-style: italic;
+    transition: .4s;
+  }
+
+  .Login-Link-reference:hover {
+    color: #3090c9;
+    margin-left: 3px;
+  }
+
+
+  @keyframes slide-Signup {
+    0% {
+      width: 0%;
+    }
+    10% {
+      width: 4%;
+    }
+    20% {
+      width: 8%;
+    }
+    30% {
+      width: 12%;
+    }
+    40% {
+      width: 16%;
+    }
+    50% {
+        width: 20%;
+    }
+    60% {
+        width: 21%;
+    }
+    70% {
+        width: 22%;
+    }
+    80% {
+        width: 23%;
+    }
+    90% {
+        width: 24%;
+    }
+    100% {
+        width: 25%;
     }
   }
 
