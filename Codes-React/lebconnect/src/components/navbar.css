@@ -5,6 +5,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
+
 .Navbar-links {
   list-style-type: none;
   display: flex;
@@ -49,6 +50,7 @@
 .Logo {
   font-size: 1.7em;
   user-select: none;
+  margin-top: 2%;
 }
 
 .Logo h2 {
@@ -60,6 +62,8 @@
   color: #3090C7;
 }
 /* ... other styles ... */
+
+
 
 .Navbar-links {
   list-style-type: none;
@@ -85,3 +89,4 @@
   font-size: 1.2em;
 }
 /* ... other styles ... */
+
