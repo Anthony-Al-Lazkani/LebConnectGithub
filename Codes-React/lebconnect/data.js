@@ -20,24 +20,25 @@ app.post("/login", cors(), async (req, res) => {
       res.status(500).json({ error: 'An error occurred' });
     }
   });
-app.post("/signup", cors(), async (req, res) => {
-    const { email, password, age, firstName, lastName, dateofbirth, password1, phonenumber } = req.body;
-    const data = {
-      email: email,
-      password: password,
-      age: age,
-      firstName: firstName,
-      lastName: lastName,
-      dateofbirth: dateofbirth,
-      password1: password1,
-      phonenumber: phonenumber
-    };
-  
+  app.post("/signup", cors(), async (req, res) => {
+    const { email, password, age, firstName, lastName, dateofbirth, password1, phonenumber} = req.body;
     try {
-      const check = await collection.findOne({ email: email }); // search if the email exists
+      const check = await collection.findOne({ email: email });
       if (check) {
         res.json("exist");
       } else {
+        const hashedPassword = await bcrypt.hash(password, saltRounds);
+        const data = {
+          email: email,
+          password: hashedPassword,
+          age: age,
+          firstName: firstName,
+          lastName: lastName,
+          dateofbirth: dateofbirth,
+          password1: password1,
+          phonenumber: phonenumber
+          
+        };
         await collection.insertMany([data]);
         res.json("notexist");
       }
