@@ -120,7 +120,7 @@ function Signup() {
                     </div> 
                     <div className='Login-Button-Box'>
                     <div className='Login-Button'>
-                        <button>SignUp</button>
+                    <button type='submit' onClick={signup}>SignUp</button>
                     </div>
                 </div>
                 
