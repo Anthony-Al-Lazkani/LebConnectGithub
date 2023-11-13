@@ -1,0 +1,80 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  
+  .Navbar-links ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center; /* Add this line */
+  /* }
+  
+  
+  .Navbar-links li {
+    display: inline-block;
+    padding: 0px 40px;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  
+  .Navbar-links a {
+    color: white;
+    transition: all .3s ease 0s;
+    font-size: 1.2em;
+  }
+  
+  
+  .Navbar-links a:hover,
+  .Navbar-links a.active {
+    color: #3090C7;
+  }
+  
+  .header-navbar {
+    display: flex;
+    position:relative;
+    width: 100%;
+    height: 80px;
+    background: rgba(0, 0, 139, .2) ;
+    backdrop-filter: blur(20px);
+    padding: 60px 3%;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+  }
+  .Logo {
+    font-size: 1.7em;
+    user-select: none;
+    margin-top: 2%;
+  }
+  
+  .Logo h2 {
+    font-weight: 700;
+    color: #fff;
+  }
+  
+  .Logo span {
+    color: #3090C7;
+  }
+  
+  
+  .nav-menu {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 50px;
+    list-style: none;
+    text-align: center;
+    width: 80vw;
+    justify-content: center;
+    margin-right: 2rem;
+    font-size: 1.2em;
+  } */
+  /* ... other styles ... */
+  
+  
