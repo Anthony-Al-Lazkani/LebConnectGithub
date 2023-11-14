@@ -60,7 +60,7 @@ function Signup() {
         <div className='container'>
             <div className='Login-Text'>
                 <h2>Sign Up</h2>
-                <div className='Underline'></div>
+                <div className='Underline-Signup'></div>
             </div>
             <form action="POST">
                 <div className='Input-Box'>
@@ -96,7 +96,7 @@ function Signup() {
                         </div>
                         <input type='email' placeholder='Email...' className='Email-Input' required maxLength={40} onChange={(e) => { setEmail(e.target.value) }}></input>
                     </div>
-                    <div className='Email-Box'>
+                    <div className='Password-Box'>
                         <div className='Password-Icon'>
                             {passwordVisible ? (
                                 <BsEye onClick={togglePasswordVisibility} />
@@ -114,7 +114,7 @@ function Signup() {
                             )}
                         </div>
 
-                        <input type={passwordVisible ? 'text' : 'password'} placeholder='Confirm Password...' className='Email-Input' required maxLength={70} onChange={(e) => { setPassword1(e.target.value) }}></input>
+                        <input type={passwordVisible ? 'text' : 'password'} placeholder='Confirm Password...' className='Password-Input' required maxLength={70} onChange={(e) => { setPassword1(e.target.value) }}></input>
                         <div className='Login-Link'>
                             <p>Already have an account?</p>
                             <Link to="/login" className='Login-Link-reference'>Login</Link> {/* Add this line */}
@@ -122,10 +122,8 @@ function Signup() {
 
                     </div> 
                     <div className='Login-Button-Box'>
-                    <div className='Login-Button'>
-                    <button type='submit' onClick={signup}>SignUp</button>
+                    <button type='submit' onClick={signup}>Sign Up</button>
                     </div>
-                </div>
                 
                 </div>
             </form>

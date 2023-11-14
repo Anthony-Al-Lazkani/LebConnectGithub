@@ -6,7 +6,7 @@ import BookData from "../../Data.json";
 
 function tourism() {
   return (
-      <div style={{position: 'absolute',top: '20px', right: '0'}}>
+      <div style={{height: "30px", position: 'absolute',top: '20px', right: '0'}}>
         <SearchBar placeholder="Enter a Book Name..." data={BookData}/>
       </div>
   );
