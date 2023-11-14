@@ -12,7 +12,7 @@ export default function Contactus() {
                         w-80 float-left border-2 p-2  
                         rounded-xl shadow-xl text-xl"> 
            <form onSubmit={handleSubmit}>
-                <p className="text-2xl">Contact us Now!</p> 
+                <p className="text-2xl">Contact us Now !</p> 
                 <div> 
                     <label className="text-sm">Select Issue*</label> 
                     <br></br> 
@@ -73,7 +73,7 @@ export default function Contactus() {
                     </button> 
                 </div> 
             </form> 
-            {message && <p>{message}</p>}
+            {message && <p className='Feedback-Message'>{message}</p>}
         </div> 
     ) 
 }

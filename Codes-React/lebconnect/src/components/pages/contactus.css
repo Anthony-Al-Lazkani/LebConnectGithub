@@ -1,15 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .absolute {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 60%; /* Increase the width */
-        padding: 5px; /* Increase the padding */
+        position:relative;
+        width: 100%;
+        padding: 5px;
         border-radius: 8px;
         box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.1);
-        margin-top: 50px;
+        margin-top: 100px;
         opacity: 0.9;
-
+        display: flex;
+        justify-content: center;
+        margin-bottom: 100px;
     }
   
   .text-2xl {
@@ -33,6 +38,7 @@
     color: #00008b;
     font-size: 18px; /* Increase the font size */
     margin-bottom: 20px;
+    height: 100%;
   }
   
   form select:focus, form input:focus, form textarea:focus {
@@ -46,7 +52,7 @@
     padding: 15px 30px; /* Increase the padding */
     font-size: 18px; /* Increase the font size */
     border: none;
-    border-radius: 4px;
+    border-radius: 15px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
