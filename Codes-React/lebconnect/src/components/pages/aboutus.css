@@ -1,35 +1,74 @@
-.section-white {
-    padding: 70px 0;
-    display: flex;
-    justify-content: space-between; /* To evenly space the containers */
+section {
+    padding: 4% 10%;
+}
+ 
+.about-us {
     width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
 }
-.container{
+ 
+.text h1 {
+    color: #3090C7;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+ 
+.text p {
+    color: floralwhite;
+}
+ 
+.last-text h3 {
+    color: #3090C7;
+    font-size: 60px;
+    font-weight: 700;
+}
+ 
+.last-text h5 {
+    color: floralwhite;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+}
+ 
+.section-white{
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.container1 {
+    /* To evenly space the containers */
     flex: 1;
-    max-width: 50%;
+    max-width: none; /*kermel ma ysir bel toul*/
 }
+ 
 .container-wrapper {
     display: flex;
-    width: 100%;
-    background: none
-  }
-.custom-h3{
-    text-align: center;
-    color: #3090C7;
-    font-family: 'Poppins';
-    font-size:x-large;
 }
-.team-item{ 
+ 
+.team-item h3{
+    color: black;
+    font-weight: bold;
+}
+ 
+.team-item {
     background-color: #3090C7;
-    text-align: center;
-    margin: 5rem; /* space between l containers */
-    padding: 60px 20px;
-    border-radius: 25px;
-    height: 400px;
-    width: 400px;
-
-
+    text-align: justify;
+    margin: 15px; /* space between l containers */
+    padding: 40px 20px;
+    border-radius: 8%; /* Use a single value here */
 }
-.team-item:hover{
+.team-info p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0; /* Ensure no default margin */
+    max-width: 100%; /* Ensure the text does not overflow the container */
+    color:black;
+}
+ 
+.team-item:hover {
     background-color: #1593db;
+    color: white;
 }
