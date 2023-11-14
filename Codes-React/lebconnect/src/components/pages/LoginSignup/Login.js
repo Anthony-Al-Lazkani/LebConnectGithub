@@ -1,54 +1,20 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import './Login.css';
-import { AiOutlineMail } from 'react-icons/ai'; // Import icons
+import { AiOutlineMail } from 'react-icons/ai';
 import { BsEye, BsEyeSlash } from 'react-icons/bs';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-
 function LoginSignup() {
-
     const history = useNavigate();
     const [passwordVisible, setPasswordVisible] = useState(false);
-    const [email, setEmail] = useState(''); // Add this line
-    async function login(e) {
-        e.preventDefault();
-
-        try {
-            await axios.post("http://localhost:8000/login",
-                { email, password }
-            )
-                .then(res => {
-                    if (res.data == "exist") {
-                        history("/", { state: { id: email } })
-
-
-                    }
-                    else if (res.data =="notexist") {
-                        alert("User have not signed up yet")
-
-
-                    }
-
-                })
-                .catch(e => {
-                    alert("User have not signed up yet")
-                    console.log(e);
-                });
-
-        }
-        catch (e) {
-            console.log(e);
-
-        }
-    }
-
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [passwordError, setPasswordError] = useState('');
 
     const togglePasswordVisibility = () => {
         setPasswordVisible(!passwordVisible);
     };
-    const [password, setPassword] = useState('');
-    const [passwordError, setPasswordError] = useState('');
 
     const validatePassword = () => {
         const passwordRegex = /^(?=.*[0-9])[a-zA-Z0-9]{8,}$/;
@@ -57,18 +23,36 @@ function LoginSignup() {
             setPasswordError("Password must be at least 8 characters");
             return false; // prevent form submission
         } else {
-
             // Clear any previous error message
             setPasswordError('');
             return true; // allow form submission
-        };
+        }
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (validatePassword()) {
-            // Handle form submission logic here
-            console.log('Password is valid');
+            login(); // Call login function if the password is valid
+        }
+    };
+
+    const login = async () => {
+        try {
+            const response = await axios.post('http://localhost:8000/login', {
+                email,
+                password,
+            });
+
+            if (response.data === 'exist') {
+                history('/', { state: { id: email } });
+            } else if (response.data === 'notexist') {
+                alert('User has not signed up yet');
+            } else if (response.data === 'incorrectPassword') {
+                alert('Incorrect password');
+            }
+        } catch (error) {
+            alert('An error occurred');
+            console.log(error);
         }
     };
 

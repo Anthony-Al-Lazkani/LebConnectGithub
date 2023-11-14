@@ -18,6 +18,9 @@ function Signup() {
     const [password1, setPassword1] = useState('');
     async function signup(e) {
         e.preventDefault();
+        if (password !== password1) {
+            alert("Passwords do not match, Please Renconfirm Password");
+            return;}
 
         try {
             await axios.post("http://localhost:8000/signup",
