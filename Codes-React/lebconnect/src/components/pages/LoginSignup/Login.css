@@ -3,17 +3,19 @@
     flex-direction: column;
     margin: auto;
     margin-top: 100px;
+    margin-bottom: 100px;
     background: transparent;
     border: 5px solid #3090c9;
     padding-bottom: 30px;
     width: 600px;
     height: 500px;
     border-radius: 25px;
-    margin-bottom: 150px;
+    /* position: relative; */
+    justify-content: center;
+    align-items: center;
 }
 
 .Login-Text-Login {
-    /* border: 1px solid black; */
     height: 70px;
     text-align: center;
     justify-content: center;
@@ -29,14 +31,13 @@
 
 
 .Underline-Login{
-    content: '';
     position: absolute;
     height: 3px;
     background-color: #3090c9;
     display: flex;
-    animation: slide 2s 1;
-    width: 25%;
-    margin: 10px 38%;
+    width: 100%;
+    margin: 10px 0%;
+    animation: slide-Signup 2s 1;
 
 }
 
@@ -84,7 +85,6 @@
     margin-left: 0px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
 }
 
 

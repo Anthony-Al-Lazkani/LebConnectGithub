@@ -6,7 +6,7 @@ import Homepage from './components/pages/homepage'; // Corrected here
 import ContactUs from './components/pages/contactus'; // Corrected here
 import AboutUs from './components/pages/aboutus'; // Corrected here
 import Tourism from './components/pages/tourism'; // Corrected here
-import LoginSignup from './components/pages/LoginSignup/LoginSignup';
+import Signup from './components/pages/LoginSignup/signup';
 import Login from './components/pages/LoginSignup/Login';
 import Footer from './components/footer';
 
@@ -19,7 +19,7 @@ function App() {
       <Navbar/>
       <Routes>
         <Route exact path="/" element={<Homepage />} />
-        <Route exact path="/LoginSignup" element={<LoginSignup />} />
+        <Route exact path="/signup" element={<Signup />} />
         <Route path='/AboutUs' element={<AboutUs />} />
         <Route path='/contactus' element={<ContactUs />} />
         <Route path='/Tourism' element={<Tourism />} />

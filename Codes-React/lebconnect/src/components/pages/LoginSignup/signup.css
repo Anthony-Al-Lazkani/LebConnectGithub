@@ -1,15 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+
 .container {
     display: flex;
     flex-direction: column;
     margin: auto;
     margin-top: 100px;
+    margin-bottom: 100px;
     background: transparent;
     border: 5px solid #3090c9;
     padding-bottom: 30px;
-    width: 600px;
-    height: 770px;
+    width: 500px;
+    height: 700px;
     border-radius: 25px;
-    margin-bottom: 150px;
+    /* position: relative; */
+    justify-content: center;
+    align-items: center;
 }
 
 .Login-Text {
@@ -28,32 +40,37 @@
 }
 
 
-.Underline {
+.Underline-Signup {
     position: absolute;
     height: 3px;
     background-color: #3090c9;
     display: flex;
-    width: 25%;
-    margin: 10px 38%;
+    width: 100%;
+    margin: 10px 0%;
     animation: slide-Signup 2s 1;
 }
 
 .Input-Box {
+    /* position: absolute; */
+    margin: auto;
     width: 100%;
-    height: 100%;
     margin-top: 20px;
-    margin-left: 15px;
+    /* margin-left: 15px; */
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    /* border: 2px solid yellow; */
+    align-items: left;  
+
 }
 
 
 .FirstName-LastName {
+  /* border: 2px solid yellow; */
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
+    margin-bottom: -10px;
 }
 
 
@@ -63,18 +80,15 @@
     border-radius: 10px;
     border: 2px solid #3090c9;
     display: flex;
-    align-items: center;
-    /* margin: auto; */
     background: #eaeaea;
     border: none;
     font-size: 1.1em;
     font-weight: 300;
     margin-top: 5px;
+    padding: 7px;
+    color: black;
 }
 
-.FLInput {
-    padding: 7px;
-}
 
 h3 {
     color: #fff;
@@ -93,7 +107,6 @@ h3 {
     border: 2px solid #3090c9;
     display: flex;
     align-items: center;
-    /* margin: auto; */
     background: #eaeaea;
     border: none;
     font-size: 1.1em;
@@ -102,9 +115,6 @@ h3 {
     padding: 5px;
 }
 
-.Date-Box {
-    margin-left: 70px;
-}
 
 .Date-Box input {
     width: 150px;
@@ -112,60 +122,65 @@ h3 {
     border-radius: 10px;
     border: 2px solid #3090c9;
     display: flex;
-    align-items: center;
-    /* margin: auto; */
     background: #eaeaea;
     border: none;
     font-size: 1.1em;
     font-weight: 300;
     margin-top: 5px;
     padding: 5px;
+    color: black;
 }
 
 
 .Email-Box {
-    margin-left: 70px;
+    margin-top: 10px;
+    /* border: 2px solid yellow; */
     position: relative;
 }
 
+.Password-Box {
+  margin-top: 10px;
+  position: relative;
+}
+
 .Email-Input {
-    width: 87%;
+    width: 100%;
     height: 45px;
     border-radius: 10px;
     border: 2px solid #3090c9;
     display: flex;
     align-items: center;
-    /* margin: auto; */
+    margin: auto;
     background: #eaeaea;
     border: none;
     font-size: 1.1em;
     font-weight: 300;
     margin-top: 5px;
     padding: 5px;
+    color: black;
 }
 
 .Password-Input {
-    width: 87%;
-    height: 45px;
+    width: 100%;
+    height: 50px;
     border-radius: 10px;
     border: 2px solid #3090c9;
     display: flex;
-    align-items: center;
-    /* margin: auto; */
     background: #eaeaea;
     border: none;
     font-size: 1.1em;
     font-weight: 300;
-    margin-top: 5px;
+    margin-top: 10px;
     padding: 5px;
     margin-bottom: 10px;
+    color: #000;
 }
 
 
 .Email-Icon {
     display: flex;
     position: absolute;
-    right: 5%;
+    right: -10%;
     top: 23%;
     font-size: 28px;
     align-items: center;
@@ -176,8 +191,8 @@ h3 {
 .Password-Icon {
     display: flex;
     position: absolute;
-    right: 5%;
-    top: 30%;
+    right: -10%;
+    top: 33%;
     font-size: 28px;
     align-items: center;
     justify-content: center; 
@@ -188,25 +203,21 @@ h3 {
 .Login-Button-Box {
     display: flex;
     position: relative;
-    width: 100%;
     border-radius: 15px;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    height: 100%;
-    left: 0;
+    margin: 5% 0;
 }
 
 
 
 
-
-.Login-Button button {
+.Login-Button-Box button {
     animation: borderCycle 5s infinite;
     height: 70px;
-    width: 140px;
+    width: 170px;
     background-color: transparent ;
     color: #fff;
+    text-align: center;
     font-weight: 700;
     font-size: 1.6em;
     border: 4px solid;
@@ -272,35 +283,110 @@ h3 {
       width: 0%;
     }
     10% {
-      width: 4%;
+      width: 10%;
     }
     20% {
-      width: 8%;
+      width: 20%;
     }
     30% {
-      width: 12%;
+      width: 30%;
     }
     40% {
-      width: 16%;
+      width: 40%;
     }
     50% {
-        width: 20%;
+        width: 50%;
     }
     60% {
-        width: 21%;
+        width: 60%;
     }
     70% {
-        width: 22%;
+        width: 70%;
     }
     80% {
-        width: 23%;
+        width: 80%;
     }
     90% {
-        width: 24%;
+        width: 90%;
     }
     100% {
-        width: 25%;
+        width: 100%;
     }
   }
 
+
+@media only screen and (max-width : 868px) {
+    .Login-Text h2 {
+      font-size: 1.8em;
+    }
+
+    .container {
+      width: 100%;
+      height: 600px;
+    }
+    .FirstName-LastName {
+      flex-direction: row;
+    }
+
+    .FirstName-LastName h3 {
+      color: #fff;
+      font-size: 1em;
+      font-weight: 400;
+    }
+
+    .FLInput {
+      height: 35px;
+      width: 120px;
+      font-size: 1em;
+    }
+
+    .Date-Box h3 {
+      font-size: 1em;
+    }
+
+    .Date-Box input {
+      height: 35px;
+      font-size: 1em;
+      width: 120px;
+    }
+
+    .Email-Input {
+      height: 35px;
+      width: 90%;
+      float: left;
+      font-size: 1em;
+    }
+
+    .Password-Input {
+      height: 35px;
+      width: 90%;
+      font-size: 1em;
+    }
+
+    .Email-Icon {
+      right: 0;
+      font-size: 25px;
+    }
+
+    .Password-Icon {
+      right:0%;
+      font-size: 25px;
+    }
+
+    .Login-Button-Box button {
+      height: 60px;
+      width: 140px;
+      font-size: 1.1em;
+    }
+
+    .Login-Button-Box {
+      display: flex;
+      position: relative;
+      border-radius: 15px;
+      text-align: center;
+      align-items: center;
+      justify-items: center;
+  }
+  
+}
 

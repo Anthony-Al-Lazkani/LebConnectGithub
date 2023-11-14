@@ -1,15 +1,16 @@
 import './navbar.css';
 import React, {useState} from 'react';
-
+import {useRef} from 'react';
 import {Link} from 'react-router-dom';
 import home from './home';
+import {FaBars, FaTimes} from 'react-icons/fa';
 
 
 function Navbar(){
-    const [click, setClick] = useState(false);
-
-    const hadleClick = () => setClick(!click);
-    const closeMobileMenu = () => setClick(false);
+    const NavRef = useRef();
+    const ShowNavBar = () => {
+        NavRef.current.classList.toggle("Responsive_Nav");
+    }
  
 
     return(
@@ -19,49 +20,22 @@ function Navbar(){
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap"
           rel="stylesheet"
         />
-            <nav className='Navbar'>
-                <header className='header-navbar'>
-                    <div class='Logo'>
-            
-                        <Link to='/' className='navbar-logo'>
-                        <h2> L<span>Connect</span></h2>
-                        </Link>
-                    <div className='menu-icon' onClick={hadleClick}>
-                        <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
-                    </div>
-                    </div>
-                    <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-                        <li class='Navbar-links'>
-                            <Link to='/' className='Navbar-links' onClick={closeMobileMenu}>
-                                Home
-                            </Link>
-                        </li>
-                        <li class='Navbar-links'>
-                            <Link to='/test' className='Navbar-links' onClick={closeMobileMenu}>
-                            News
-                            </Link>
-                        </li>
-                        <li class=' Navbar-links'>
-                            <Link to='/tourism' className='Navbar-links' onClick={closeMobileMenu}>
-                            Tourism
-                            </Link>
-                        </li>
-                        <li class='Navbar-links'>
-                            <Link to='/aboutus' className='Navbar-links' onClick={closeMobileMenu}>
-                            About us
-                            </Link>
-                        </li>
-                        <li class='Navbar-links'>
-                            <Link to='/Login' className='Navbar-links' onClick={closeMobileMenu}>
-                            Login
-                            </Link>
-                        </li>
-                        
-                        
-                    </ul>
-                </header>
-                
+        <header className='Navbar-Header'>
+            <div className='Logo'><Link to='/'><h2>L<span>Connect</span></h2></Link></div>
+            <nav className='Navbar' ref={NavRef}>
+                <Link to='/' data-text = 'Home'>HOME</Link>
+                <Link to='/test'>NEWS</Link>
+                <Link to='/tourism'>TOURISM</Link>
+                <Link to='/aboutus'>ABOUT US</Link>
+                <Link to='/Login'>LOGIN</Link>
+                <button className = 'Nav-Button Nav-Close-Button' onClick={ShowNavBar}>
+                    <FaTimes />
+                </button>
             </nav>
+            <button className = 'Nav-Button'  onClick={ShowNavBar}>
+                <FaBars />
+            </button>
+        </header>
         
         </>
 
