@@ -11,6 +11,24 @@ function Navbar(){
     const ShowNavBar = () => {
         NavRef.current.classList.toggle("Responsive_Nav");
     }
+    const ProfRef = useRef();
+    const ShowProfile = () => {
+        ProfRef.current.classList.toggle("Profile_Screen");
+    }
+
+
+
+    const inputRef = useRef(null);
+    const [image, setImage] = useState("");
+    const handleImageClick = () => {
+        inputRef.current.click();
+    }
+
+    const handleImageChange = (event) => {
+        const file = event.target.files[0];
+        console.log(file);
+        setImage(event.target.files[0]);
+    }
  
 
     return(
@@ -28,6 +46,7 @@ function Navbar(){
                 <Link to='/tourism'>TOURISM</Link>
                 <Link to='/aboutus'>ABOUT US</Link>
                 <Link to='/Login'>LOGIN</Link>
+
                 <button className = 'Nav-Button Nav-Close-Button' onClick={ShowNavBar}>
                     <FaTimes />
                 </button>
@@ -35,6 +54,32 @@ function Navbar(){
             <button className = 'Nav-Button'  onClick={ShowNavBar}>
                 <FaBars />
             </button>
+            <button className='Profile-Button' onClick={ShowProfile}>
+                < CgProfile />
+            </button>
+            <div className='Profile' ref={ProfRef}>
+                <div className='Profile-Div'>
+                    <div className='Profile-Photo' onClick={handleImageClick}>
+                        {image ? (
+                            <img src={URL.createObjectURL(image)} alt=''/>
+                        ): (
+
+                            <img src={User} alt=''/>
+                        )}
+                        <input type='file' ref={inputRef} onChange={handleImageChange} style={{display:"none"}}/>
+                    </div>
+                </div>
+                <div className='Info'>
+                    <h2>Personal Information</h2>
+                    <div className='NAME'>
+                        <h3>Name</h3>
+                        <h3>Last Name</h3>
+                    </div>
+                </div>
+                <button className='Profile-Button-Close' onClick={ShowProfile}>
+                < FaTimes />
+                </button>
+            </div>
         </header>
         
         </>

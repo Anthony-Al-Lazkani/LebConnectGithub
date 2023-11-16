@@ -9,7 +9,7 @@
 .Navbar-Header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content:space-between;
   height: 100px;
   padding: 0 2rem;
   color: #fff;
@@ -37,6 +37,65 @@
   visibility: hidden;
   opacity: 0;
   font-size: 1.8rem;
+}
+
+.Profile{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    transition: 1s;
+    transform: translateX(100%);
+    backdrop-filter: blur(50px);
+    z-index: 10000;
+}
+
+.Profile_Screen {
+  position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    transition: 1s;
+    transform: translateX(0%);
+    background-color: #3090c7;
+    z-index: 10000;
+}
+
+
+.Profile-Button {
+  font-size: 2.5em;
+  background: none;
+  border: none;
+  color: #fff;
+  transition: .6s;
+}
+
+.Profile-Button:hover {
+  color: #3090c7;
+}
+
+.Profile-Button-Close {
+  color: #fff;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 2em;
+  z-index: 100000;
+  background: none;
+  border: none;
+  transition: .6s;
 }
 
 
@@ -94,8 +153,40 @@
   }
 
 
-
-
-
-
 }
+.Profile-Photo img {
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+}
+
+
+.Profile-Div {
+  position: absolute;
+  top: 5%;
+}
+
+.Info {
+  position: absolute;
+  top: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+.NAME {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
