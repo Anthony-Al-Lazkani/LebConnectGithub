@@ -2,7 +2,7 @@ import './navbar.css';
 import React, {useState} from 'react';
 import {useRef} from 'react';
 import {Link} from 'react-router-dom';
-import home from './home';
+import home from '../comp/home';
 import {FaBars, FaTimes} from 'react-icons/fa';
 
 

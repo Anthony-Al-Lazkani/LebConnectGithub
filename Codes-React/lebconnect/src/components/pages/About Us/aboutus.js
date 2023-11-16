@@ -1,5 +1,6 @@
 import React from 'react';
 import './aboutus.css'; // Import your CSS file
+import aboutuspic from '../../images/R.jpg'
  
 function AboutUs() {
  
@@ -8,7 +9,7 @@ function AboutUs() {
  
         <section className="about-us">
           <div className="image">
-            <img src={process.env.PUBLIC_URL + '/images/R.jpg'} alt="" />
+            <img src={aboutuspic} alt="Lebanese Bay" />
           </div>
           <div className="text">
             <h1>About Us</h1>

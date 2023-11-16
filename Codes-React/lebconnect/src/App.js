@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/navbar'; // Corrected here
+import Navbar from './components/comp/navbar'; // Corrected here
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
-import Homepage from './components/pages/homepage'; // Corrected here
-import ContactUs from './components/pages/contactus'; // Corrected here
-import AboutUs from './components/pages/aboutus'; // Corrected here
-import Tourism from './components/pages/tourism'; // Corrected here
+import Homepage from './components/pages/HomePage/homepage'; // Corrected here
+import ContactUs from './components/pages/Contact Us/contactus'; // Corrected here
+import AboutUs from './components/pages/About Us/aboutus'; // Corrected here
+import Tourism from './components/pages/Tourism/tourism'; // Corrected here
 import Signup from './components/pages/LoginSignup/signup';
 import Login from './components/pages/LoginSignup/Login';
-import Footer from './components/footer';
+import Footer from './components/comp/footer';
 
 
 

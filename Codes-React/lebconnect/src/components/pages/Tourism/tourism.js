@@ -1,7 +1,7 @@
 
 import React from 'react';
-import SearchBar from '../SearchBar.js';
-import BookData from "../../Data.json";
+import SearchBar from '../../comp/SearchBar';
+import BookData from "./Data.json";
 
 
 function tourism() {
