@@ -1,0 +1,34 @@
+.news {
+    color:aliceblue;
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+  }
+  
+  .news h1 {
+    text-align: center;
+    color: #3090C7;
+    padding: 20px 0;
+  }
+  
+  .news .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .news .cards .card {
+    flex: 0 0 30%;
+    margin: 1% 0.5%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+  }
+  
+  .news .cards .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .news .cards .card img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+  }

@@ -9,6 +9,7 @@ import Tourism from './components/pages/Tourism/tourism'; // Corrected here
 import Signup from './components/pages/LoginSignup/signup';
 import Login from './components/pages/LoginSignup/Login';
 import Footer from './components/comp/footer';
+import News from './components/pages/News/news';
 
 
 
@@ -20,6 +21,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Homepage />} />
         <Route exact path="/signup" element={<Signup />} />
+        <Route exact path="/news" element={<News />} />
         <Route path='/AboutUs' element={<AboutUs />} />
         <Route path='/contactus' element={<ContactUs />} />
         <Route path='/Tourism' element={<Tourism />} />

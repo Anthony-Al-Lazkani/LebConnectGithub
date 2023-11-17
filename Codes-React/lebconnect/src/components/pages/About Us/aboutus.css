@@ -7,7 +7,9 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 4rem;
 }
- 
+.image {
+    border-radius:20%
+  }
 .text h1 {
     color: #3090C7;
     font-size: 2em;
@@ -22,6 +24,7 @@
     color: #3090C7;
     font-size: 60px;
     font-weight: 700;
+
 }
  
 .last-text h5 {
@@ -29,10 +32,11 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 18px;
+
 }
  
 .section-white{
-    padding: 60px 0;
+    padding: 40px 0;
     display: flex;
     justify-content: space-between;
 }
@@ -40,6 +44,7 @@
     /* To evenly space the containers */
     flex: 1;
     max-width: none; /*kermel ma ysir bel toul*/
+    padding-top: 10px;
 }
  
 .container-wrapper {

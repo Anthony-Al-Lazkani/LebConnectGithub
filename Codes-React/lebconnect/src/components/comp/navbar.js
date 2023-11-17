@@ -43,7 +43,7 @@ function Navbar(){
             <div className='Logo'><Link to='/'><h2>L<span>Connect</span></h2></Link></div>
             <nav className='Navbar' ref={NavRef}>
                 <Link to='/' data-text = 'Home'>HOME</Link>
-                <Link to='/test'>NEWS</Link>
+                <Link to='/news'>NEWS</Link>
                 <Link to='/tourism'>TOURISM</Link>
                 <Link to='/aboutus'>ABOUT US</Link>
                 <Link to='/Login'>LOGIN</Link>
