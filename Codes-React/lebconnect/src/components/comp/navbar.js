@@ -4,7 +4,8 @@ import {useRef} from 'react';
 import {Link} from 'react-router-dom';
 import home from '../comp/home';
 import {FaBars, FaTimes} from 'react-icons/fa';
-
+import { CgProfile } from 'react-icons/cg';
+import User from '../../components/images/user.png'
 
 function Navbar(){
     const NavRef = useRef();
