@@ -44,7 +44,7 @@ function LoginSignup() {
             });
 
             if (response.data === 'exist') {
-                history('/', { state: { id: email } });
+                history('/', { state: {isLoggedin:true } });
             } else if (response.data === 'notexist') {
                 alert('User has not signed up yet');
             } else if (response.data === 'incorrectPassword') {

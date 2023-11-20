@@ -31,7 +31,7 @@ function Signup() {
                         alert("User already exists")
                     }
                     else if (res.data === "notexist") {
-                        history("/", { state: { id: email } })
+                        history("/", { state:{isLoggedin:true} })
                     }
                 })
                 .catch(e => {

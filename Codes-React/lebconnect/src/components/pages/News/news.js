@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 import './news.css';
-
+import logo from '../../images/logo.jpg';
 function News() {
   const [articles, setArticles] = useState([]);
 
@@ -26,7 +26,7 @@ function News() {
     <div className="cards">
       {articles && articles.map(article => (
         <Card key={article.url}>
-          <Card.Img variant="top" src={article.image} />
+          <Card.Img variant="top" src={logo} className="card-img" />
           <Card.Body>
             <Card.Title>{article.title}</Card.Title>
             <Card.Text>

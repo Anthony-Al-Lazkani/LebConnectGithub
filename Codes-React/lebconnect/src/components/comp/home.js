@@ -1,10 +1,19 @@
 import React from "react";
 import './home.css'
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 
 
+
 function Home() {
+    const history = useNavigate();
+    const goToaboutus= () => {
+        history('/aboutus');
+      };
+    const goToLogin= () => {
+        history('/login');
+      }
     return (
         <>
         <section className="Front-Page">
@@ -14,8 +23,8 @@ function Home() {
                     <br></br>Press the bell icon to learn more.
                 </p>
                 <div>
-                    <button type="button"><span></span>LEARN MORE</button>
-                    <button type="button"><span></span>SUBSCRIBE</button>
+                    <button type="button" onClick={goToaboutus}><span></span>LEARN MORE</button>
+                    <button type="button" onClick={goToLogin}><span></span>SUBSCRIBE</button>
                 </div>
             </div>
         </section>

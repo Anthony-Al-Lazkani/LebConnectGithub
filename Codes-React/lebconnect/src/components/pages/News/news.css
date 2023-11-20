@@ -3,6 +3,7 @@
     font-family: Arial, sans-serif;
     margin: 0 auto;
   }
+
   
   .news h1 {
     text-align: center;
@@ -27,8 +28,8 @@
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
   
-  .news .cards .card img {
-    height: 200px;
+.news .cards .card img {
+    height: auto;
     object-fit: cover;
     width: 100%;
   }
