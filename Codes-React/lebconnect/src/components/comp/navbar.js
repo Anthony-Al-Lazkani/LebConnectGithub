@@ -1,12 +1,13 @@
 import './navbar.css';
 import React, { useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link,useNavigate} from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { CgProfile } from 'react-icons/cg';
 import User from '../../components/images/user.png';
 import { useLocation } from 'react-router-dom';
 
 function Navbar() {
+    const history=useNavigate();
     const NavRef = useRef();
     const ProfRef = useRef();
     const inputRef = useRef(null);
@@ -14,7 +15,13 @@ function Navbar() {
     const location = useLocation();
     const { state } = location;
     const isLoggedIn = state ? state : false;
-    const handlesignout = () => setIsLoggedIn(false);
+    let token=localStorage.getItem('token');
+    function handlesignout(){
+        console.log("signing out")
+        localStorage.removeItem('token');
+        token = null;
+        history('/');
+      } 
 
     const ShowNavBar = () => {
         NavRef.current.classList.toggle("Responsive_Nav");
@@ -33,6 +40,7 @@ function Navbar() {
         console.log(file);
         setImage(event.target.files[0]);
     };
+    const user = JSON.parse(localStorage.getItem('user'));
 
     return (
         <>
@@ -49,7 +57,7 @@ function Navbar() {
                     <Link to='/news'>NEWS</Link>
                     <Link to='/tourism'>TOURISM</Link>
                     <Link to='/aboutus'>ABOUT US</Link>
-                    {isLoggedIn ? (
+                    {token ? (
                         <>
                             <button className='Nav-Button Nav-Close-Button' onClick={ShowNavBar}>
                                 <FaTimes />
@@ -79,12 +87,18 @@ function Navbar() {
                     <div className='Info'>
                         <h2>n</h2>
                         <div className='NAME'>
-                            <h3>Name</h3>
-                            <h3>Last Name</h3>
+                            <h3>first name</h3>
+                            <h3>lat name</h3>
                         </div>
                     </div>
                     <button className='Profile-Button-Close' onClick={ShowProfile}>
+                    <button className='SignOut-Button' onClick={handlesignout}>
+  Sign Out
+</button>
+                    
+                        
                         <FaTimes />
+
                     </button>
                 </div>
             </header>

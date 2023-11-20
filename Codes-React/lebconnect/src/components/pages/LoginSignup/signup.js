@@ -30,7 +30,10 @@ function Signup() {
                     if (res.data ==="exist") {
                         alert("User already exists")
                     }
-                    else if (res.data === "notexist") {
+                    else if (res.data.status === "notexist") {
+                        const token = res.data.token;
+                        localStorage.setItem('token', token);
+                        console.log(token);
                         history("/", { state:{isLoggedin:true} })
                     }
                 })

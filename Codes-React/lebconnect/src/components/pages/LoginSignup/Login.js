@@ -43,7 +43,10 @@ function LoginSignup() {
                 password,
             });
 
-            if (response.data === 'exist') {
+            if (response.data.status === 'exist') {
+                const token = response.data.token;
+                localStorage.setItem('token', token);
+                console.log(token);
                 history('/', { state: {isLoggedin:true } });
             } else if (response.data === 'notexist') {
                 alert('User has not signed up yet');
@@ -51,6 +54,7 @@ function LoginSignup() {
                 alert('Incorrect password');
             }
         } catch (error) {
+            alert(error)
             alert('An error occurred');
             console.log(error);
         }

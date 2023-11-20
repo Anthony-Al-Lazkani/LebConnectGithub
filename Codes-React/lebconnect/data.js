@@ -7,6 +7,7 @@ app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 const saltRounds = 10;
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
 app.post("/login", cors(), async (req, res) => {
     const { email, password } = req.body;
@@ -17,7 +18,8 @@ app.post("/login", cors(), async (req, res) => {
             const passwordMatch = await bcrypt.compare(password, user.password);
 
             if (passwordMatch) {
-                res.json("exist");
+               const token = jwt.sign({ userId: user._id, email: user.email }, 'sdbjqidbUIDVBuduiwdwugiwuid7w9F8FHIwdkbhnufajb', { expiresIn: '1h' });
+               res.json({ status: "exist", token: token });
             } else {
                 res.json("incorrectPassword");
             }
@@ -26,6 +28,7 @@ app.post("/login", cors(), async (req, res) => {
         }
     } catch (e) {
         console.error(e);
+        alert(e);
         res.status(500).json({ error: 'An error occurred' });
     }
 });
@@ -33,6 +36,7 @@ app.post("/login", cors(), async (req, res) => {
     const { email, password, age, firstName, lastName, dateofbirth, password1, phonenumber} = req.body;
     try {
       const check = await collection.findOne({ email: email });
+
       if (check) {
         res.json("exist");
       } else {
@@ -48,8 +52,12 @@ app.post("/login", cors(), async (req, res) => {
           phonenumber: phonenumber
           
         };
+        
         await collection.insertMany([data]);
-        res.json("notexist");
+        const user = await collection.findOne({ email: email });
+        const token = jwt.sign({ userId: user._id, email: user.email }, 'sdbjqidbUIDVBuduiwdwugiwuid7w9F8FHIwdkbhnufajb', { expiresIn: '1h' });
+        res.json({ status: "notexist", token: token });
+      
       }
     } catch (e) {
       console.error(e);
