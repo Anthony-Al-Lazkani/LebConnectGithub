@@ -40,7 +40,6 @@ function Navbar() {
         console.log(file);
         setImage(event.target.files[0]);
     };
-    const user = JSON.parse(localStorage.getItem('user'));
 
     return (
         <>
