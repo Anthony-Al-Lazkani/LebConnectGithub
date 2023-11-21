@@ -182,7 +182,18 @@
   margin-top: 30px;
 }
 
-
+.SignOut-Button{
+  order: 2; /* this will place the SignOut button below other elements with lower order */
+  background: none;
+  border: none;
+  color: #fff;
+  transition: .6s;
+  font-size: 0.7em;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: 40px;
+  margin-top: 250px; /* add some space between the Name and the SignOut button */
+}
 
 
 

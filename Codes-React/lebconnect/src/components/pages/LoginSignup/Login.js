@@ -11,6 +11,7 @@ function LoginSignup() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [passwordError, setPasswordError] = useState('');
+    const [token, setToken] = useState('');
 
     const togglePasswordVisibility = () => {
         setPasswordVisible(!passwordVisible);
@@ -44,7 +45,9 @@ function LoginSignup() {
             });
 
             if (response.data.status === 'exist') {
+                
                 const token = response.data.token;
+                setToken(token);
                 localStorage.setItem('token', token);
                 console.log(token);
                 history('/', { state: {isLoggedin:true } });

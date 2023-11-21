@@ -1,12 +1,15 @@
 import './navbar.css';
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef,useEffect } from 'react';
 import { Link,useNavigate} from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { CgProfile } from 'react-icons/cg';
 import User from '../../components/images/user.png';
 import { useLocation } from 'react-router-dom';
+import axios from 'axios';
 
 function Navbar() {
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
     const history=useNavigate();
     const NavRef = useRef();
     const ProfRef = useRef();
@@ -16,12 +19,38 @@ function Navbar() {
     const { state } = location;
     const isLoggedIn = state ? state : false;
     let token=localStorage.getItem('token');
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
     function handlesignout(){
         console.log("signing out")
         localStorage.removeItem('token');
         token = null;
+        setFirstName('');
+        setLastName('');
         history('/');
       } 
+      const getUser = async () => {
+        try {
+            const token = localStorage.getItem('token');
+            const response = await axios.get('http://localhost:8000/user', {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+    
+            setFirstName(response.data.firstName);
+            setLastName(response.data.lastName);
+        } catch (error) {
+            console.error(error);
+        }
+    };
+    useEffect(() => {
+        if (token){
+            getUser();
+        
+        }
+    }, [token]);
 
     const ShowNavBar = () => {
         NavRef.current.classList.toggle("Responsive_Nav");
@@ -84,10 +113,10 @@ function Navbar() {
                         </div>
                     </div>
                     <div className='Info'>
-                        <h2>n</h2>
+                        <h2>Welcome!</h2>
                         <div className='NAME'>
-                            <h3>first name</h3>
-                            <h3>lat name</h3>
+                            <h3><h3>{capitalizeFirstLetter(firstName)} {capitalizeFirstLetter(lastName)}</h3></h3>
+                           
                         </div>
                     </div>
                     <button className='Profile-Button-Close' onClick={ShowProfile}>

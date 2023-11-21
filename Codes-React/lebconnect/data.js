@@ -64,6 +64,20 @@ app.post("/login", cors(), async (req, res) => {
       res.status(500).json({ error: 'An error occurred' });
     }
   });
+  app.get("/user", cors(), async (req, res) => {
+    const authHeader = req.headers['authorization'];
+    const token = authHeader && authHeader.split(' ')[1];
+
+    if (token == null) return res.sendStatus(401);
+
+    jwt.verify(token, 'sdbjqidbUIDVBuduiwdwugiwuid7w9F8FHIwdkbhnufajb', async (err, user) => {
+        if (err) return res.sendStatus(403);
+
+        const userData = await collection.findOne({ _id: user.userId });
+
+        res.json({ firstName: userData.firstName, lastName: userData.lastName });
+    });
+});
 app.listen(8000, () => {
     console.log("server is running")
 });

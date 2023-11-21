@@ -6,7 +6,7 @@ function News() {
   const [articles, setArticles] = useState([]);
 
   useEffect(() => {
-    fetch('https://newsdata.io/api/1/news?country=lb&category=top&language=en&apikey=pub_32760fc2f024b9100b38deea29a08c4851469')
+    fetch('https://newsdata.io/api/1/news?country=lb&category=top&language=ar&apikey=pub_32760fc2f024b9100b38deea29a08c4851469')
       .then(response => response.json())
       
       .then(data => setArticles(data.results));
