@@ -94,7 +94,7 @@ app.get("/user", cors(), async (req, res) => {
 
     const userData = await collection.findOne({ _id: user.userId });
 
-    res.json({ firstName: userData.firstName, lastName: userData.lastName });
+    res.json({ firstName: userData.firstName, lastName: userData.lastName, age: userData.age, phonenumber: userData.phonenumber, dateofbirth : userData.dateofbirth, email : userData.email });
   });
 });
 app.listen(8000, () => {
