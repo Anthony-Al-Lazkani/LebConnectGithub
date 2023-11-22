@@ -120,7 +120,7 @@ function Navbar() {
                         </div>
                     </div>
                     <button className='Profile-Button-Close' onClick={ShowProfile}>
-                    <button className='SignOut-Button' onClick={handlesignout}>
+                    <button  onClick={handlesignout}>
   Sign Out
 </button>
                     
