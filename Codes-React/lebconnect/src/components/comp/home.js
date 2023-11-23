@@ -89,17 +89,18 @@ function Home() {
                 <div className="Facilities-Col">
                     <div className="Food-Image"></div>
                     <h3>Top Tier Food</h3>
-                    <p>Restaurents with the best food bla bla bla bla.</p>
+                    <p>Restaurants with the best food that you can find in our beloved country! </p>
                 </div>
                 <div className="Facilities-Col">
                     <div className="Hotel-Image"></div>
                     <h3>Most Luxirious Hotels</h3>
-                    <p>Restaurents with the best food bla bla bla bla.</p>
+                    <p>
+Hotels in Lebanon offer a unique blend of Middle Eastern hospitality, combining modern amenities with a rich cultural experience </p>
                 </div>
                 <div className="Facilities-Col">
                     <div className="Beach-Image"></div>
                     <h3>Beaches In Lebanon</h3>
-                    <p>Restaurents with the best food bla bla bla bla.</p>
+                    <p>Lebanon's beaches beckon with their Mediterranean charm, boasting crystal-clear waters, golden sands, and vibrant seaside culture, creating an idyllic coastal escape.</p>
                 </div>
             </div>
         </section>
