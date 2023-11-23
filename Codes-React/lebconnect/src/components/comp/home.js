@@ -60,25 +60,23 @@ function Home() {
 
         <section className="Services">
             <h1>Services We Offer</h1>
-            <p>We offer services that are bla blalalalalalalal.</p>
+            <p>Explore Lebanon with our website! Discover the latest news, exclusive hotel features, and must-visit tourism spots. Your gateway to a vibrant and unforgettable Lebanese experience starts here. Explore, stay informed, and plan your next adventure with us!</p>
 
             <div className="Row">
                 <div className="Services-Col">
                     <h3>Restaurants</h3>
-                    <p>We provide the best restaurents based on the place, view, quality of the food and the experience of your life
+                    <p>We provide the best restaurants based on the place, view, quality of the food and the experience of your life
                         in different culture throughout lebanon to make you come to lebanon again.
                     </p>
                 </div>
                 <div className="Services-Col">
                     <h3>Hotels</h3>
-                    <p>We provide the best restaurents based on the place, view, quality of the food and the experience of your life
-                        in different culture throughout lebanon to make you come to lebanon again.
+                    <p>Discover the epitome of luxury and comfort in Lebanon with our curated selection of hotels, each offering a distinct blend of opulence, hospitality, and cultural richness. Immerse yourself in a world where impeccable service meets breathtaking views, ensuring an unforgettable stay.
                     </p>
                 </div>
                 <div className="Services-Col">
                     <h3>Resorts</h3>
-                    <p>We provide the best restaurents based on the place, view, quality of the food and the experience of your life
-                        in different culture throughout lebanon to make you come to lebanon again.
+                    <p>"Escape to a world of unparalleled luxury and tranquility with our handpicked selection of resorts in Lebanon. Nestled amidst the breathtaking landscapes and cultural richness of this enchanting country, our resorts redefine the meaning of indulgence.
                     </p>
                 </div>
             </div>

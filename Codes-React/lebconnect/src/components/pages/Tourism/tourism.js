@@ -191,7 +191,7 @@ function Tourism() {
       </div>
     </section>
     <section className='Mexican'>
-      <h2> TOP LEBBANESE FOOD RESTAURANTS IN LEBANON</h2>
+      <h2> TOP LEBANESE FOOD RESTAURANTS IN LEBANON</h2>
     <div class="tour__container">
       <div class="tour__card">
         <img src={pic17} alt="" class="tour__card-img" />
