@@ -3,7 +3,13 @@ import './home.css'
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-
+import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css';
+import Photo1 from '../images/photo1.jpg';
+import Photo2 from '../images/photo2.jpeg';
+import Photo3 from '../images/resorts.jpeg';
+import Photo4 from '../images/photo4.jpeg';
+import Photo5 from '../images/photo5.jpg';
 
 
 function Home() {
@@ -14,9 +20,32 @@ function Home() {
     const goToLogin= () => {
         history('/login');
       }
+
+    const images = [Photo1,Photo2, Photo3, Photo4, Photo5];
+
+
+
+    const properties = {
+        prevArrow: <div style={{ visibility: 'hidden' }}></div>,
+        nextArrow: <div style={{ visibility: 'hidden' }}></div>,
+        autoplay: true,
+        duration : 5000,
+        transitionDuration: 2000,
+        onChange: () => {}, // Your onChange function
+        onStartChange: () => {} // Your onStartChange function
+      };
+
     return (
         <>
         <section className="Front-Page">
+            <Slide {...properties} >
+                    {images.map((image, index) => (
+                        <div key={index} className="each-slide-effect">
+                        <div style={{ 'backgroundImage': `url(${image})` }}>
+                        </div>
+                        </div>
+                    ))}
+            </Slide>
             <div className="Front-Page-Content">
                 <h1>WELCOME TO LEBANON</h1>
                 <p>Enrich your vacation with tours full of delicious food, places, and elegent hotels,

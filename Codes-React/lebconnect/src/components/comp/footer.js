@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaInstagram, FaFacebook} from 'react-icons/fa'; // Import icons
-import {RiTwitterXFill as FaX} from 'react-icons/ri';
+import { FaInstagram, FaFacebook } from 'react-icons/fa'; // Import icons
+import { RiTwitterXFill as FaX } from 'react-icons/ri';
 import {
   Box,
   FooterContainer,
@@ -9,6 +9,7 @@ import {
   Column,
   FooterLink,
   Heading,
+  Copyright
 } from "./footerStyles";
 
 const footer = () => {
@@ -20,72 +21,72 @@ const footer = () => {
           <Column>
             <Heading><Link to="/aboutus">About Us</Link></Heading>
             <FooterLink href="#">
-              Aim
+              Our Story
             </FooterLink>
             <FooterLink href="#">
               Vision
             </FooterLink>
             <FooterLink href="#">
-              Testimonials
+              Reviews
             </FooterLink>
           </Column>
           <Column>
-            <Heading>Services</Heading>
-            <FooterLink href="#">
-              Writing
+          <Heading><Link to="#">Services</Link></Heading>
+            <FooterLink> <Link to ="/news">News</Link>
+              
+            </FooterLink>
+            <FooterLink><Link to ="/tourism">Tourism</Link>
+            
             </FooterLink>
             <FooterLink href="#">
-              Internships
-            </FooterLink>
-            <FooterLink href="#">
-              Coding
+              Others
             </FooterLink>
           </Column>
           <Column>
             <Heading><Link to="contactus">Contact Us</Link></Heading>
-            <FooterLink href="#">
-              Uttar Pradesh
+            <FooterLink href="Questions">
+             Questions
             </FooterLink>
-            <FooterLink href="#">
-              Ahemdabad
+            <FooterLink href="Inquiries">
+             Inquiries
             </FooterLink>
-            <FooterLink href="#">
-              Indore
+            <FooterLink href="For Business">
+              For Business
             </FooterLink>
 
           </Column>
           <Column>
-            <Heading>Social Media</Heading>
-            <FooterLink href="#">
+            <Heading><Link to="#">Social Media</Link></Heading>
+            <FooterLink href="https://facebook.com">
 
               <span
                 style={{
                   marginLeft: "10px",
                 }}
               ><FaFacebook />
-                Facebook
+                LConnect
               </span>
 
             </FooterLink>
-            <FooterLink href="#">
+            <FooterLink href="https://instagram.com">
 
               <span
                 style={{
                   marginLeft: "10px",
                 }}
               ><FaInstagram />
-                Instagram
+                LConnect
               </span>
 
             </FooterLink>
-            <FooterLink href="https://twitter.com/MassoudNohra1">
+            <FooterLink href="https://twitter.com">
 
               <span
                 style={{
                   marginLeft: "10px",
                 }}
               ><FaX />
-                LebConnect
+                LConnect
               </span>
 
             </FooterLink>
@@ -102,6 +103,9 @@ const footer = () => {
           </Column>
         </Row>
       </FooterContainer>
+      <Copyright>
+        <p>&copy; 2023 LConnect All rights reserved.</p>
+      </Copyright>
     </Box>
   );
 };

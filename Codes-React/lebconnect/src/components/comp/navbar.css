@@ -51,17 +51,17 @@
     justify-content: center;
     gap: 1.5rem;
     transition: 1s;
-    transform: translateX(100%);
+    transform: translateX(200%);
     backdrop-filter: blur(50px);
     z-index: 10000;
 }
 
 .Profile_Screen {
-  position: fixed;
+    position: fixed;
     top: 0;
     right: 0;
     height: 100%;
-    width: 20%;
+    width: 15%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,12 +74,28 @@
 }
 
 
+
+
 .Profile-Button {
-  font-size: 2.5em;
+  font-size: 2.8em;
   background: none;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
   border: none;
-  color: #fff;
   transition: .6s;
+  position: absolute;
+  right: 20px;
+}
+
+
+.Profile-Button img{
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .Profile-Button:hover {
@@ -122,6 +138,47 @@
     z-index: 10000;
   }
 
+  .Profile{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    transition: 1s;
+    transform: translateX(-200%);
+    backdrop-filter: blur(50px);
+    z-index: 10000;
+}
+
+  .Profile_Screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    transition: 1s;
+    transform: translateX(0%);
+    background-color: #3090c7;
+    z-index: 10000;
+}
+
+  
+  .Profile-Button {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+
   .Navbar-Header .Responsive_Nav {
     transform: none;
   }
@@ -136,6 +193,7 @@
     font-size: 2rem;
     letter-spacing: 2px;
     line-height: 100px;
+    font-size: 1.2em;
   }
 
   .Navbar a::after {
@@ -155,8 +213,9 @@
 
 }
 .Profile-Photo img {
-  height: 130px;
-  width: 130px;
+  height: 120px;
+  width: 120px;
+  border: 2px solid #fff;
   border-radius: 50%;
 }
 
@@ -183,17 +242,62 @@
 }
 
 .SignOut-Button{
-  order: 2; /* this will place the SignOut button below other elements with lower order */
-  background: none;
+  position: absolute;
+  bottom: 30px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #4267B2;
   border: none;
+  width: 100px;
   color: #fff;
-  transition: .6s;
-  font-size: 0.7em;
-  margin-top: 10px;
-  margin-left: auto;
-  margin-right: 40px;
-  margin-top: 250px; /* add some space between the Name and the SignOut button */
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: .9em;
+  transition: .4s;
 }
+
+.SignOut-Button:hover {
+  transform: translateY(-3px);
+  opacity: 0.8;
+}
+
+
+.Profile-Underline {
+  position: relative;
+  height: 2px;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  width: 100%;
+}
+
+.Personal-Information {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.Infos {
+  margin-top: 20px;
+}
+
+
+.Infos .Infos-Col div {
+  margin-bottom: 15px;
+  width: 100%;
+  border: 1px solid #fff;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding: 10px;
+}
+
+.Italic {
+  font-style: italic;
+}
+
 
 
 
