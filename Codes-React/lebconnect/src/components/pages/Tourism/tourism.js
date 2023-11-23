@@ -1,7 +1,7 @@
 
 import React from 'react';
 import './Tourism.css';
-import SearchBar from '/home/lazkani/Desktop/LebConnect/LebConnectGithub/Codes-React/lebconnect/src/components/comp/SearchBar.js';
+import SearchBar from '../../comp/SearchBar'
 import BookData from './Data.json';
 import pic1 from '../../images/pic1.jpg';
 import pic2 from '../../images/pic2.jpg';
