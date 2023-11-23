@@ -55,6 +55,21 @@ const contactusSchema = new mongoose.Schema({
         required: true,
     },
 });
+const articleSchema = new mongoose.Schema({
+    title: {
+      type: String,
+      required: true,
+    },
+    description: {
+      type: String,
+    },
+    link: {
+      type: String,
+      required: true,
+    },
+  });
+  
+const Article = mongoose.model('Article', articleSchema);
 const contactus = mongoose.model('Contactus', contactusSchema);
 const collection=mongoose.model('test3',newSchema)
-module.exports={contactus,collection}
+module.exports={contactus,collection,Article}

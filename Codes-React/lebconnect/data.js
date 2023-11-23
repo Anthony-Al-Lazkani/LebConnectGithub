@@ -1,5 +1,5 @@
 const express = require("express")
-const { contactus, collection } = require('./mongo');
+const { contactus, collection,Article } = require('./mongo');
 const cors = require("cors")
 const app = express()
 app.use(express.json())
@@ -122,6 +122,27 @@ app.get("/user", cors(), async (req, res) => {
 
     res.json({ firstName: userData.firstName, lastName: userData.lastName, age: userData.age, phonenumber: userData.phonenumber, dateofbirth : userData.dateofbirth, email: userData.email });
   });
+});
+
+app.post('/save-article', cors(), async (req, res) => {
+  try {
+    const { title, description, link } = req.body;
+
+    // Create a new article instance
+    const newArticle = new Article({
+      title,
+      description,
+      link,
+    });
+
+    // Save the article to the database
+    await newArticle.save();
+
+    res.json({ status: 'success' });
+  } catch (e) {
+    console.error(e);
+    res.status(500).json({ error: 'An error occurred' });
+  }
 });
 app.listen(8000, () => {
   console.log("server is running")
