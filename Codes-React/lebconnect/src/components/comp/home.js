@@ -47,7 +47,7 @@ function Home() {
                     ))}
             </Slide>
             <div className="Front-Page-Content">
-                <h1>WELCOME TO LEBANON</h1>
+                <h1 className="Font-Page-Header-Text">WELCOME TO LEBANON</h1>
                 <p>Enrich your vacation with tours full of delicious food, places, and elegent hotels,
                     <br></br>Press the bell icon to learn more.
                 </p>

@@ -115,6 +115,16 @@ p {
     background-position: center; */
 }
 
+.Font-Page-Header-Text {
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 1px 1px #000;
+}
+
+.Front-Page-Content {
+    text-shadow: 1px 1px #000;
+}
+
 
 .Front-Page-Content {
     width: 100%;
