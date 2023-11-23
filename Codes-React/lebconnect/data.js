@@ -31,7 +31,7 @@ app.post("/login", cors(), async (req, res) => {
     alert(e);
     res.status(500).json({ error: 'An error occurred' });
   }
-});
+}); 
 app.post("/signup", cors(), async (req, res) => {
   const { email, password, age, firstName, lastName, dateofbirth, password1, phonenumber } = req.body;
   try {

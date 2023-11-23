@@ -15,7 +15,7 @@ export default function Contactus() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_n0db9oi', 'template_dmiw3vj', form.current, 'ZbwEKxZKV4IYHAhIa')
+    emailjs.sendForm('service_o3afwf8', 'template_dmiw3vj', form.current, 'ZbwEKxZKV4IYHAhIa')
       .then((result) => {
           console.log(result.text);
           setShowPopup(true);
@@ -32,8 +32,8 @@ export default function Contactus() {
     const [email, setEmail] = useState('');
     const [phonenumber, setPhoneNumber] = useState('');
     const [query, setQuery] = useState('');
-    const handleSubmit = async (event) => {
-        event.preventDefault();
+    const handleSubmit = async (e) => {
+        e.preventDefault();
         const response = await axios.post('http://localhost:8000/contactus', {
             issue,
             email,
@@ -55,7 +55,7 @@ export default function Contactus() {
         <div className="absolute mt-52 ml-48  
                         w-80 float-left border-2 p-2  
                         rounded-xl shadow-xl text-xl"> 
-           <form action='POST' onSubmit={handleSubmit} ref={form} onSubmit={sendEmail}>
+          <form action='POST' onSubmit={(e) => { handleSubmit(e); sendEmail(e); }} ref={form}>
                 <p className="text-2xl">Contact us Now !</p> 
                 <div> 
                 
