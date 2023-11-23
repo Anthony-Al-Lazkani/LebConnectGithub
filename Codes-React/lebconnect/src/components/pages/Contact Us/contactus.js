@@ -5,6 +5,7 @@ import {useRef} from "react";
 import emailjs from '@emailjs/browser';
 import Popup from 'reactjs-popup';
 import {FaTimes} from 'react-icons/fa';
+import {motion} from 'framer-motion';
 
 
 
@@ -50,80 +51,97 @@ export default function Contactus() {
     const closePopup = () => {
       setShowPopup(false);
     };
-    
-    return( 
-        <div className="absolute mt-52 ml-48  
-                        w-80 float-left border-2 p-2  
-                        rounded-xl shadow-xl text-xl"> 
+
+    return(
+        <motion.div className="absolute mt-52 ml-48
+                        w-80 float-left border-2 p-2
+                        rounded-xl shadow-xl text-xl" initial="initialState"
+                        animate="animateState"
+                        exit="exitState"
+                        transition={{
+                          type: "tween",
+                          duration: 0.5
+                        }}
+                        variants={{
+                          initialState: {
+                            opacity: 0
+                          },
+                          animateState: {
+                            opacity: 1
+                          },
+                          exitState: {
+                            opacity: 0
+                          }
+                        }}>
           <form action='POST' onSubmit={(e) => { handleSubmit(e); sendEmail(e); }} ref={form}>
-                <p className="text-2xl">Contact us Now !</p> 
-                <div> 
-                
-                    <label className="text-sm">Select Issue*</label> 
-                    <br></br> 
-                    <select className="bg-gray-50 border border-gray-300  
-                                        text-gray-600 text-sm rounded-lg  
+                <p className="text-2xl">Contact us Now !</p>
+                <div>
+
+                    <label className="text-sm">Select Issue*</label>
+                    <br></br>
+                    <select className="bg-gray-50 border border-gray-300
+                                        text-gray-600 text-sm rounded-lg
                                         focus:border-blue-500 w-full p-2.5"  onChange={(e) => setIssue(e.target.value)}
-                                        value={issue}> 
-        
-                        <option value="Feedback" > 
-                            Feedback 
-                        </option> 
-                        <option value="ReportAPlace"> 
-                            Rate a Place 
-                        </option> 
-                        <option value="ReportAProblem"> 
-                            Report a Problem 
-                        </option> 
-                        <option value="ReportAbuse"> 
-                            Report an Abuse  
-                        </option> 
-  
-                    </select> 
-                    <br></br> 
-                    <label className="text-sm">Name*</label> 
-                    <br></br> 
-                    <input className="bg-gray-50 border border-gray-300  
-                                        text-sm rounded-lg focus:border-blue-500 
-                                        w-full p-2.5" 
-                            type="text" 
-                            placeholder="Name"  onChange={(e) => { setEmail(e.target.value) }} name='user_name'/> 
-                    <br></br> 
-                    <label className="text-sm">Email Address*</label> 
-                    <br></br> 
-                    <input className="bg-gray-50 border border-gray-300  
-                                        text-sm rounded-lg focus:border-blue-500 
-                                        w-full p-2.5" 
-                            type="email" 
-                            placeholder="Insert email here"  onChange={(e) => { setEmail(e.target.value) }} name='user_email'/> 
-                    <br></br> 
-                    <label className="text-sm">Contact No.</label> 
-                    <br></br> 
-                    <input className="bg-gray-50 border border-gray-300 
-                                        text-sm rounded-lg focus:border-blue-500  
-                                        w-full p-2.5" 
-                            type="phone" 
-                            placeholder="Insert Phone number"  onChange={(e) => {setPhoneNumber(e.target.value) }}/> 
-                    <br></br> 
-                    <label className="text-sm"> 
-                        Drop Your Query  
-                    </label> 
-                    <br></br> 
-                    <textarea className="bg-gray-50 border border-gray-300  
-                                            text-sm rounded-lg  
-                                            focus:border-blue-500  
-                                            w-full p-2.5" 
-                                rows="4" 
-                                cols="25" 
-                                maxlength="300" 
+                                        value={issue}>
+
+                        <option value="Feedback" >
+                            Feedback
+                        </option>
+                        <option value="ReportAPlace">
+                            Rate a Place
+                        </option>
+                        <option value="ReportAProblem">
+                            Report a Problem
+                        </option>
+                        <option value="ReportAbuse">
+                            Report an Abuse
+                        </option>
+
+                    </select>
+                    <br></br>
+                    <label className="text-sm">Name*</label>
+                    <br></br>
+                    <input className="bg-gray-50 border border-gray-300
+                                        text-sm rounded-lg focus:border-blue-500
+                                        w-full p-2.5"
+                            type="text"
+                            placeholder="Name"  onChange={(e) => { setEmail(e.target.value) }} name='user_name'/>
+                    <br></br>
+                    <label className="text-sm">Email Address*</label>
+                    <br></br>
+                    <input className="bg-gray-50 border border-gray-300
+                                        text-sm rounded-lg focus:border-blue-500
+                                        w-full p-2.5"
+                            type="email"
+                            placeholder="Insert email here"  onChange={(e) => { setEmail(e.target.value) }} name='user_email'/>
+                    <br></br>
+                    <label className="text-sm">Contact No.</label>
+                    <br></br>
+                    <input className="bg-gray-50 border border-gray-300
+                                        text-sm rounded-lg focus:border-blue-500
+                                        w-full p-2.5"
+                            type="phone"
+                            placeholder="Insert Phone number"  onChange={(e) => {setPhoneNumber(e.target.value) }}/>
+                    <br></br>
+                    <label className="text-sm">
+                        Drop Your Query
+                    </label>
+                    <br></br>
+                    <textarea className="bg-gray-50 border border-gray-300
+                                            text-sm rounded-lg
+                                            focus:border-blue-500
+                                            w-full p-2.5"
+                                rows="4"
+                                cols="25"
+                                maxlength="300"
                                 placeholder="Max Allowed Characters: 300" onChange={(e) => {setQuery(e.target.value) }}>
-                    </textarea> 
-                    <br></br> 
-                    <button className="bg-blue-500 hover:bg-blue-700  
-                                        text-white font-bold  
-                                        py-2 px-4 rounded" 
-                            type="submit"> 
-                        Submit 
+                    </textarea>
+                    <br></br>
+                    <button className="bg-blue-500 hover:bg-blue-700
+                                        text-white font-bold
+                                        py-2 px-4 rounded"
+                            type="submit">
+                        Submit
                     </button>
                     <Popup open={showPopup} closeOnDocumentClick onClose={closePopup}>
                       <div className="modal">
@@ -132,9 +150,9 @@ export default function Contactus() {
                           <button onClick={closePopup} className='Close-Popup'><FaTimes/></button>
                         </div>
                       </div>
-                  </Popup> 
-                </div> 
-            </form> 
-        </div> 
-    ) 
+                  </Popup>
+                </div>
+            </form>
+        </motion.div>
+    )
 }

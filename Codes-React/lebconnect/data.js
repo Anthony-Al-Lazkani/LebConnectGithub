@@ -31,7 +31,7 @@ app.post("/login", cors(), async (req, res) => {
     alert(e);
     res.status(500).json({ error: 'An error occurred' });
   }
-}); 
+});
 app.post("/signup", cors(), async (req, res) => {
   const { email, password, age, firstName, lastName, dateofbirth, password1, phonenumber } = req.body;
   try {
@@ -83,6 +83,32 @@ app.post('/contactus', cors(), async (req, res) => {
 
   }
 });
+
+app.post('/updateProfilePicture', cors(), async (req, res) => {
+  try {
+    const authHeader = req.headers['authorization'];
+    const token = authHeader && authHeader.split(' ')[1];
+
+    if (!token) return res.sendStatus(401);
+
+    jwt.verify(token, 'sdbjqidbUIDVBuduiwdwugiwuid7w9F8FHIwdkbhnufajb', async (err, user) => {
+      if (err) return res.sendStatus(403);
+
+      const userId = user.userId;
+      const profilePicture = req.body.profilePicture; // Assuming the image data is sent in the request body
+
+      // Update the user's profile picture
+      await User.findByIdAndUpdate(userId, { $set: { profilePicture } });
+
+      res.json({ status: 'success' });
+    });
+  } catch (e) {
+    console.error(e);
+    res.status(500).json({ error: 'An error occurred' });
+  }
+});
+
+
 app.get("/user", cors(), async (req, res) => {
   const authHeader = req.headers['authorization'];
   const token = authHeader && authHeader.split(' ')[1];

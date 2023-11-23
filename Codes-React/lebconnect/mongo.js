@@ -35,19 +35,20 @@ const newSchema=    new mongoose.Schema({
     },
     dateofbirth:{
         type:Date
-    }
+    },
+    
 })
 const contactusSchema = new mongoose.Schema({
     issue:{
         type:String,
-        required:true,  
+        required:true,
     },
     email: {
         type: String,
         required: true,
     },
     phonenumber: {
-        type: Number, 
+        type: Number,
     },
     query: {
         type: String,
@@ -57,4 +58,3 @@ const contactusSchema = new mongoose.Schema({
 const contactus = mongoose.model('Contactus', contactusSchema);
 const collection=mongoose.model('test3',newSchema)
 module.exports={contactus,collection}
-

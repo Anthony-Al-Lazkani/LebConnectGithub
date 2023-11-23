@@ -32,7 +32,7 @@ function Navbar() {
         const parts = dateofbirth.split('-');
           return `${parts[2]}/${parts[1]}/${parts[0]}`;
     }
-    
+
     function handlesignout(){
         console.log("signing out")
         localStorage.removeItem('token');
@@ -44,7 +44,7 @@ function Navbar() {
         setPhoneNumber('');
         setEmail('');
         history('/');
-      } 
+      }
       const getUser = async () => {
         try {
             const token = localStorage.getItem('token');
@@ -53,7 +53,7 @@ function Navbar() {
                     'Authorization': `Bearer ${token}`
                 }
             });
-    
+
             setFirstName(response.data.firstName);
             setLastName(response.data.lastName);
             setAge(response.data.age);
@@ -67,7 +67,7 @@ function Navbar() {
     useEffect(() => {
         if (token){
             getUser();
-        
+
         }
     }, [token]);
 
@@ -172,7 +172,7 @@ function Navbar() {
                 <button className='Nav-Button' onClick={ShowNavBar}>
                     <FaBars />
                 </button>
-                
+
             </header>
         </>
     );

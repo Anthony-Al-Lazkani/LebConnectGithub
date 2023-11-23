@@ -113,10 +113,8 @@ Hotels in Lebanon offer a unique blend of Middle Eastern hospitality, combining 
 
 
         </>
-        
+
     );
 }
-          
-export default Home;
 
-  
+export default Home;
