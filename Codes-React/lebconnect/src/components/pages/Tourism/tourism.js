@@ -34,7 +34,7 @@ function Tourism() {
       <SearchBar placeholder='Search for place..' data={BookData}/>
   </div>
   <section class="section_tour_container">
-  
+
     <div class="tour__container">
       <div class="tour__card">
         <img src={pic} alt="" class="tour__card-img" />
@@ -117,7 +117,10 @@ function Tourism() {
         <div class="tour__data">
           <h5 class="tour__data-title"> Margherita Pizzeria</h5>
           <span class="tour__data-subtitle">Gemmayze</span>
-        </div>
+          </div>
+          <div className='BackSide'>
+            BackSide
+          </div>
       </div>
       <div class="tour__card">
         <img src={pic8} alt="" class="tour__card-img" />
@@ -237,6 +240,14 @@ function Tourism() {
         <a href="#" class="tour__link"></a>
       </div>
       </div>
+      <div class="card">
+          <div class="card-side front">
+            <div>Front Side</div>
+          </div>
+          <div class="card-side back">
+            <div>Back Side</div>
+          </div>
+        </div>
     </section>
   </>
   )
