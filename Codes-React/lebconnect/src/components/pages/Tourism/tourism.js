@@ -207,6 +207,7 @@ function Tourism() {
           <h5 class="tour__data-title"> Liza</h5>
           <span class="tour__data-subtitle">Achrafieh</span>
         </div>
+        <a href="https://lizabeirut.com/" class="tour__link"></a>
       </div>
       <div class="tour__card">
         <img src={pic18} alt="" class="tour__card-img" />
@@ -214,6 +215,7 @@ function Tourism() {
           <h5 class="tour__data-title">Em sherif</h5>
           <span class="tour__data-subtitle">Verdun</span>
         </div>
+        <a href="https://www.emsherif.com/" class="tour__link"></a>
       </div>
       <div class="tour__card">
         <img src={pic19} alt="" class="tour__card-img" />
@@ -221,7 +223,7 @@ function Tourism() {
           <h5 class="tour__data-title">Leila </h5>
           <span class="tour__data-subtitle">Verdun</span>
         </div>
-        <a href="#" class="tour__link"></a>
+        <a href="https://www.google.com/search?q=leila+dbayeh&rlz=1C1GCEA_enLB1027LB1027&oq=leila+dbayeh&gs_lcrp=EgZjaHJvbWUqCggAEAAY4wIYgAQyCggAEAAY4wIYgAQyDQgBEC4YrwEYxwEYgAQyCAgCEAAYFhgeMggIAxAAGBYYHjIICAQQABgWGB4yCAgFEAAYFhgeMggIBhAAGBYYHjIICAcQABgWGB4yCAgIEAAYFhgeMggICRAAGBYYHtIBCDQwODhqMGo0qAIAsAIA&sourceid=chrome&ie=UTF-8" class="tour__link"></a>
       </div>
       <div class="tour__card">
         <img src={pic20} alt="" class="tour__card-img" />
@@ -229,7 +231,7 @@ function Tourism() {
           <h5 class="tour__data-title">Al Mokhtar</h5>
           <span class="tour__data-subtitle">Jenesnaya, South Lebanon</span>
         </div>
-        <a href="#" class="tour__link"></a>
+        <a href="https://www.instagram.com/almokhtar/?hl=en" class="tour__link"></a>
       </div>
       <div class="tour__card">
         <img src={pic21} alt="" class="tour__card-img" />
@@ -237,7 +239,7 @@ function Tourism() {
           <h5 class="tour__data-title"> Le Phénicien</h5>
           <span class="tour__data-subtitle">Tyre, South Lebanon</span>
         </div>
-        <a href="#" class="tour__link"></a>
+        <a href="https://www.instagram.com/lephenicienlb" class="tour__link"></a>
       </div>
       </div>
       <div class="card">

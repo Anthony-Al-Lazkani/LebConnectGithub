@@ -31,5 +31,44 @@
   "language": "Arabic",
   "link": "https://www.pizzeriamargherita.com/\n",
   "title": "Margherita Pizzeria"
-  }
+  },
+  {
+    "country": "Lebanon",
+    "City" : "Ashrafiyeh",
+    "language": "Arabic",
+    "link": "https://lizabeirut.com/\n",
+    "title": " Liza Restaurant"
+    },
+    {
+      "country": "Lebanon",
+      "City" : "Ashrafiyeh",
+      "language": "Arabic",
+      "link": "https://www.emsherif.com/\n",
+      "title": "Em Sherif"
+      },
+      {
+        "country": "Lebanon",
+        "City" : "Dbayeh",
+        "language": "Arabic",
+        "link": "https://www.google.com/search?q=leila+dbayeh&rlz=1C1GCEA_enLB1027LB1027&oq=leila+dbayeh&gs_lcrp=EgZjaHJvbWUqCggAEAAY4wIYgAQyCggAEAAY4wIYgAQyDQgBEC4YrwEYxwEYgAQyCAgCEAAYFhgeMggIAxAAGBYYHjIICAQQABgWGB4yCAgFEAAYFhgeMggIBhAAGBYYHjIICAcQABgWGB4yCAgIEAAYFhgeMggICRAAGBYYHtIBCDQwODhqMGo0qAIAsAIA&sourceid=chrome&ie=UTF-8\n",
+        "title": "Leila"
+     },
+     {
+          "country": "Lebanon",
+          "City" : "Jenesnaya Lebanon",
+          "language": "Arabic",
+          "link": "https://www.instagram.com/almokhtar/?hl=en\n",
+          "title": "Al Mokhtar"
+      },
+      {
+            "country": "Lebanon",
+            "City" : "Beirout Lebanon",
+            "language": "Arabic",
+            "link": "https://www.instagram.com/lephenicienlb/\n",
+            "title": "Le Phenicen"
+            }
+  
+
+    
+
 ]
