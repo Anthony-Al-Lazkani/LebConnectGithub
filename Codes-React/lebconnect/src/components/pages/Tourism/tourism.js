@@ -1,13 +1,15 @@
 
 import React from 'react';
 import './Tourism.css';
-
+import SearchBar from '/home/lazkani/Desktop/LebConnect/LebConnectGithub/Codes-React/lebconnect/src/components/comp/SearchBar.js';
+import BookData from './Data.json';
 import pic1 from '../../images/pic1.jpg';
 import pic2 from '../../images/pic2.jpg';
 import pic3 from '../../images/pic3.jpg'
 import pic4 from '../../images/pic4.jpg'
 import pic5 from '../../images/hotel2.jpg'
 import pic6 from '../../images/italian.jpg'
+import pic from '../../images/piccccc.jpg'
 import pic7 from '../../images/marioemario.jpg'
 import pic8 from '../../images/sud.jpg'
 import pic9 from '../../images/viaroma.jpg'
@@ -28,11 +30,14 @@ function Tourism() {
   return (
     <>
   <h1> WHERE TO GO?</h1>
+  <div className="SearchBar-Style">
+      <SearchBar placeholder='Search for place..' data={BookData}/>
+  </div>
   <section class="section_tour_container">
   
     <div class="tour__container">
       <div class="tour__card">
-        <img src={pic1} alt="" class="tour__card-img" />
+        <img src={pic} alt="" class="tour__card-img" />
         <div class="tour__data">
           <h5 class="tour__data-title">Lady Of Lebanon </h5>
           <span class="tour__data-subtitle">Harissa</span>

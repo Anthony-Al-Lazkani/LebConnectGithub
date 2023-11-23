@@ -1,6 +1,6 @@
 import React from 'react';
 import './aboutus.css'; // Import your CSS file
-import aboutuspic from '../../images/R.jpg'
+import aboutuspic from '../../images/R.jpg';
  
 function AboutUs() {
  
@@ -8,9 +8,7 @@ function AboutUs() {
       <>
  
         <section className="about-us">
-          <div className="image">
-            <img className="image" src={aboutuspic} alt="Lebanese Bay" />
-          </div>
+            <img className="Aboutus-Image" src={aboutuspic} alt="Lebanese Bay" />
           <div className="text">
             <h1>About Us</h1>
             <hr />
