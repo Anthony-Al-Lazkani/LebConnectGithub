@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaInstagram, FaFacebook} from 'react-icons/fa'; // Import icons
-import {RiTwitterXFill as FaX} from 'react-icons/ri';
+import { FaInstagram, FaFacebook } from 'react-icons/fa'; // Import icons
+import { RiTwitterXFill as FaX } from 'react-icons/ri';
 import {
   Box,
   FooterContainer,
@@ -9,6 +9,7 @@ import {
   Column,
   FooterLink,
   Heading,
+  Copyright
 } from "./footerStyles";
 
 const footer = () => {
@@ -102,6 +103,9 @@ const footer = () => {
           </Column>
         </Row>
       </FooterContainer>
+      <Copyright>
+        <p>&copy; 2023 LConnect All rights reserved.</p>
+      </Copyright>
     </Box>
   );
 };

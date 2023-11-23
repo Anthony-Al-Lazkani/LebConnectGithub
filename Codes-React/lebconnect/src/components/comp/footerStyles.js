@@ -66,6 +66,13 @@ export const FooterLink = styled.a`
 export const Heading = styled.p`
 	font-size: 24px;
 	color: #fff;
-	margin-bottom: 40px;
+	margin-bottom: 40px
 	font-weight: bold;
+`;
+export const Copyright = styled.div`
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #fff;
 `;
