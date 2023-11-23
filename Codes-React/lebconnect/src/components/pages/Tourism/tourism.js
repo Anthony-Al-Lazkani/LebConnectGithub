@@ -118,9 +118,7 @@ function Tourism() {
           <h5 class="tour__data-title"> Margherita Pizzeria</h5>
           <span class="tour__data-subtitle">Gemmayze</span>
           </div>
-          <div className='BackSide'>
-            BackSide
-          </div>
+          <a href="https://www.pizzeriamargherita.com/" className="tour__link" target="_blank"></a>
       </div>
       <div class="tour__card">
         <img src={pic8} alt="" class="tour__card-img" />
@@ -128,6 +126,7 @@ function Tourism() {
           <h5 class="tour__data-title">Sud</h5>
           <span class="tour__data-subtitle">Dbayeh</span>
         </div>
+        <a href = "https://qrstuff.s3.eu-west-1.amazonaws.com/file/20231121/224720/0c00a9ba12e567f3/SUD%20Menu%2023.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIE5CBLNMAXNAMVJA%2F20231123%2Feu-west-1%2Fs3%2Faws4_request&X-Amz-Date=20231123T195635Z&X-Amz-SignedHeaders=host&X-Amz-Expires=1200&X-Amz-Signature=c44bddfebb4625b38bf61657be27ed6b4e636b70f3f90d4dc541a527d0047bf8" className="tour__link" target="_blank"></a>
       </div>
       <div class="tour__card">
         <img src={pic7} alt="" class="tour__card-img" />
@@ -135,7 +134,7 @@ function Tourism() {
           <h5 class="tour__data-title">Mario e Mario</h5>
           <span class="tour__data-subtitle">Hamra</span>
         </div>
-        <a href="#" class="tour__link"></a>
+        <a href="https://cdn.qr-code-generator.com/account11511789/41471065_1.pdf?Expires=1700855957&Signature=LPDOgqcr8-YbGRA6YXdlwLkzvz88HYeqxBtoATx6Vk6aq6hmEfwOZQGYyL1WSPWvoqP7TezplC7THezu6CTzvHVU6q6S3dt-yk2gp9dvUVEdumZWxh-j1R6FqRH-xci-e-O0R2MeLNI117~O0eryUQdPamDPI-yo90jJdlnFFI1oAOkAyRldNF7q4Y8u86EIEX6Tbjy0sOm88DOGapSh6OvafygAlBzPvMMtHYXE7TKc1D-gM1he2Eg5XR1jGg6vCpB2CNS6FpaA~2gE1ocrIwVyBRlIGRyuexVjEOp~jifQK2DYLlK5SXwCpPzl4jW8TBzOr5BxjUv7~NO3SMWXAA__&Key-Pair-Id=KKMPOJU8AYATR" class="tour__link"></a>
       </div>
       <div class="tour__card">
         <img src={pic9} alt="" class="tour__card-img" />
@@ -164,6 +163,7 @@ function Tourism() {
           <h5 class="tour__data-title"> Salud</h5>
           <span class="tour__data-subtitle">Gemmayze</span>
         </div>
+        <a href="https://www.google.com/maps?q=SALUD,+st,+Beirut&ftid=0x151f174995bc9c47:0xfd3dc3b12998d11f&hl=en-LB&gl=lb&entry=gps&lucs=karto&g_ep=CAISBjYuNDYuMRgAINeCAyoFa2FydG8%3D&g_st=ic" className="tour__link" target="_blank"></a>
       </div>
       <div class="tour__card">
         <img src={pic12} alt="" class="tour__card-img" />
