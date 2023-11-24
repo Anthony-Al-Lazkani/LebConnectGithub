@@ -93,6 +93,7 @@
   height: 60px;
   width: 60px;
   border-radius: 50%;
+  border:1px solid #fff;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -172,7 +173,7 @@
     z-index: 10000;
 }
 
-  
+
   .Profile-Button {
     position: absolute;
     top: 30px;
@@ -232,6 +233,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: left;
+}
+
+.Info h2 {
+  color: #fff;
+  font-size: 1.3em;
 }
 
 .NAME {
@@ -298,11 +304,3 @@
 .Italic {
   font-style: italic;
 }
-
-
-
-
-
-
-
-

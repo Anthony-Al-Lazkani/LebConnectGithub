@@ -80,7 +80,7 @@ function AboutUs() {
                         <div className="team-info">
                         <p>By becoming a member, you immerse yourself in the heart of Lebanese heritage,participating in cultural events and forging meaningful
                            connections with like-minded individuals.
-      This community offers a</p><p> platform to break down barriers, dispel misconceptions, and create a global network of unity qqjdnqjdbqdbqdbqb  idbqidbqibdq
+      This community offers a</p><p> platform to break down barriers, dispel misconceptions, and create a global network of unity 
                        </p>
                         </div>
                       </div>

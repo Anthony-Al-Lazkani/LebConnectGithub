@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Card from 'react-bootstrap/Card';
 import './news.css';
-import logo from '../../images/logo.jpg';
 import { motion } from 'framer-motion';
+import axios from 'axios';
 
 function News() {
   const [articles, setArticles] = useState([]);
@@ -10,11 +10,35 @@ function News() {
   useEffect(() => {
     fetch('https://newsdata.io/api/1/news?country=lb&category=top&language=en&apikey=pub_32760fc2f024b9100b38deea29a08c4851469')
       .then(response => response.json())
-      .then(data => {
-        setArticles(data.results);
-        data.results.forEach(saveArticleToDatabase);
+      .then(async data => {
+        const articlesWithImages = await Promise.all(data.results.map(async article => {
+          const image = await fetchImage(article.title, article.id);
+          return { ...article, image };
+        }));
+
+        setArticles(articlesWithImages);
+        articlesWithImages.forEach(saveArticleToDatabase);
       });
   }, []);
+
+  async function fetchImage(title, articleId) {
+    try {
+      const response = await axios.get('https://api.unsplash.com/search/photos', {
+        params: {
+          query: `${title} ${articleId}`,
+          client_id: 'tSESqp1J4tgSJHlmwrcbRD5vqj9sSwjXH7WtUOOCW3U',
+        },
+      });
+
+      console.log('Unsplash API Response:', response.data);
+
+      const firstImage = response.data.results[0];
+      return firstImage ? firstImage.urls.small : '';
+    } catch (error) {
+      console.error('Error fetching image:', error);
+      return '';
+    }
+  }
 
   function limitDescription(description, wordLimit = 10) {
     if (!description) return '';
@@ -69,8 +93,8 @@ function News() {
       <div className="cards">
         {articles && articles.map(article => (
           <Card key={article.url}>
-            <Card.Img variant="top" src={logo} className="card-img" />
-            <Card.Body>
+            {article.image && <Card.Img variant="top" src={article.image} className="card-img" />}
+            <Card.Body className="Card-TXT">
               <Card.Title>{article.title}</Card.Title>
               <Card.Text>
                 {limitDescription(article.description)}
