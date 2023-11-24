@@ -27,7 +27,7 @@ const footer = () => {
               Vision
             </FooterLink>
             <FooterLink href="#">
-              Reviews
+              Why Join US
             </FooterLink>
           </Column>
           <Column>

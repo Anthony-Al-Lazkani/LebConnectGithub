@@ -16,8 +16,26 @@ function Signup() {
     const [phonenumber, setPhonenumber] = useState('');
     const [password, setPassword] = useState('');
     const [password1, setPassword1] = useState('');
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const passwordRegex = /^(?=.*[0-9])[a-zA-Z0-9]{8,}$/;
+
     async function signup(e) {
         e.preventDefault();
+        if (!email || !password || !firstName || !lastName || !age || !dateofbirth || !phonenumber || !password1) {
+            alert('Please fill in all the fields');
+            return;
+        }
+
+        if (!emailRegex.test(email)) {
+            alert('Invalid email format');
+            return;
+        }
+        if(!passwordRegex.test(password)){
+            alert('Password must be at least 8 characters');
+            return;
+        }
+    
+    
         if (password !== password1) {
             alert("Passwords do not match, Please Renconfirm Password");
             return;}

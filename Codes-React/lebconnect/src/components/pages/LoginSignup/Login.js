@@ -12,32 +12,27 @@ function LoginSignup() {
     const [password, setPassword] = useState('');
     const [passwordError, setPasswordError] = useState('');
     const [token, setToken] = useState('');
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const passwordRegex = /^(?=.*[0-9])[a-zA-Z0-9]{8,}$/;
 
     const togglePasswordVisibility = () => {
         setPasswordVisible(!passwordVisible);
     };
 
-    const validatePassword = () => {
-        const passwordRegex = /^(?=.*[0-9])[a-zA-Z0-9]{8,}$/;
+    
 
-        if (!passwordRegex.test(password)) {
-            setPasswordError("Password must be at least 8 characters");
-            return false; // prevent form submission
-        } else {
-            // Clear any previous error message
-            setPasswordError('');
-            return true; // allow form submission
-        }
-    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (validatePassword()) {
             login(); // Call login function if the password is valid
-        }
+        
     };
 
     const login = async () => {
+        if (!emailRegex.test(email)) {
+            alert('Invalid email format');
+            return;
+        }
         try {
             const response = await axios.post('http://localhost:8000/login', {
                 email,

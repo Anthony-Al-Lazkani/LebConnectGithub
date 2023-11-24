@@ -83,7 +83,7 @@ function Home() {
         </section>
 
         <section className="Facilities">
-            <h1>Our Facilities</h1>
+            <h1>What you can find?</h1>
 
             <div className="Row">
                 <div className="Facilities-Col">

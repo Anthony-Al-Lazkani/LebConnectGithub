@@ -6,6 +6,7 @@ import { CgProfile } from 'react-icons/cg';
 import User from '../../components/images/user.png';
 import { useLocation } from 'react-router-dom';
 import axios from 'axios';
+import { color } from 'framer-motion';
 
 function Navbar() {
     const [firstName, setFirstName] = useState('');
@@ -128,7 +129,7 @@ function Navbar() {
                                     </div>
                                 </div>
                                 <div className='Info'>
-                                    <h2>Welcome {capitalizeFirstLetter(firstName)} !</h2>
+                                <h2 style={{ color: 'white' }}>Welcome {capitalizeFirstLetter(firstName)} !</h2>
                                     <div className='Profile-Underline'></div>
                                     <div className='Personal-Information'>
                                         <h3>Personal Information</h3>

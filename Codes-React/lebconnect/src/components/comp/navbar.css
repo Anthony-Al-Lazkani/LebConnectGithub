@@ -244,7 +244,7 @@
 .SignOut-Button{
   position: absolute;
   bottom: 30px;
-  height: 40px;
+  height: 30px;
   border-radius: 10px;
   background-color: #4267B2;
   border: none;
@@ -256,6 +256,7 @@
   justify-content: center;
   font-size: .9em;
   transition: .4s;
+
 }
 
 .SignOut-Button:hover {
@@ -282,7 +283,7 @@
 .Infos {
   margin-top: 20px;
 }
-
+ 
 
 .Infos .Infos-Col div {
   margin-bottom: 15px;
