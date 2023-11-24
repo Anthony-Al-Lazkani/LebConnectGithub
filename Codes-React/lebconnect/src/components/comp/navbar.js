@@ -105,11 +105,12 @@ function Navbar() {
                     <Link to='/news'>NEWS</Link>
                     <Link to='/tourism'>TOURISM</Link>
                     <Link to='/aboutus'>ABOUT US</Link>
+                    <button className='Nav-Button Nav-Close-Button' onClick={ShowNavBar}>
+                        <FaTimes />
+                    </button>
                     {token ? (
                         <>
-                            <button className='Nav-Button Nav-Close-Button' onClick={ShowNavBar}>
-                                <FaTimes />
-                            </button>
+
                             <button className='Profile-Button' onClick={ShowProfile}>
                                 {image ? (
                                                 <img src={URL.createObjectURL(image)} alt='' />

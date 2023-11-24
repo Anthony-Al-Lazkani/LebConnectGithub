@@ -188,6 +188,7 @@
     position: absolute;
     top: 2rem;
     right: 2rem;
+    color: #fff;
   }
 
   .Navbar a {
@@ -289,7 +290,7 @@
 .Infos {
   margin-top: 20px;
 }
- 
+
 
 .Infos .Infos-Col div {
   margin-bottom: 15px;
