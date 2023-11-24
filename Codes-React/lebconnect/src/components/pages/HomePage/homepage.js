@@ -2,13 +2,13 @@ import React from 'react';
 import '../../../App.css';
 import Footer from '../../comp/footer.js'
 import Home from '../../comp/home.js'
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 
 
-export default function Homepage(){
-    return (
-        <>
-        <motion.div 
+export default function Homepage() {
+  return (
+    <>
+      <motion.div
         initial="initialState"
         animate="animateState"
         exit="exitState"
@@ -27,8 +27,8 @@ export default function Homepage(){
             opacity: 0
           }
         }}>
-          <Home/>
-        </motion.div>
-        </>
-    )
+        <Home />
+      </motion.div>
+    </>
+  )
 }

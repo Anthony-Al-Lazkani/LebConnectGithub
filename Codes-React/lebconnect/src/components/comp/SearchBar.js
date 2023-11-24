@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./SearchBar.css";
-import { FaSearch, FaTimes} from 'react-icons/fa'; // Import icons
+import { FaSearch, FaTimes } from 'react-icons/fa'; // Import icons
 
 function SearchBar({ placeholder, data }) {
   const [filteredData, setFilteredData] = useState([]);
@@ -26,35 +26,35 @@ function SearchBar({ placeholder, data }) {
   };
 
   return (
-    
-      <div className="search" >
-        <div className="searchInputs">
-          <input
-            type="text"
-            placeholder={placeholder}
-            value={wordEntered}
-            onChange={handleFilter}
-          />
-          <div className="searchIcon">
-            {filteredData.length === 0 ? (
-              <FaSearch />
-            ) : (
-              <FaTimes id="clearBtn" onClick={clearInput} />
-            )}
-          </div>
+
+    <div className="search" >
+      <div className="searchInputs">
+        <input
+          type="text"
+          placeholder={placeholder}
+          value={wordEntered}
+          onChange={handleFilter}
+        />
+        <div className="searchIcon">
+          {filteredData.length === 0 ? (
+            <FaSearch />
+          ) : (
+            <FaTimes id="clearBtn" onClick={clearInput} />
+          )}
         </div>
-        {filteredData.length != 0 && (
-          <div className="dataResult">
-            {filteredData.slice(0, 15).map((value, key) => {
-              return (
-                <a className="dataItem" href={value.link} _self>
-                  <p>{value.title} </p>
-                </a>
-              );
-            })}
-          </div>
-        )}
       </div>
+      {filteredData.length != 0 && (
+        <div className="dataResult">
+          {filteredData.slice(0, 15).map((value, key) => {
+            return (
+              <a className="dataItem" href={value.link} _self>
+                <p>{value.title} </p>
+              </a>
+            );
+          })}
+        </div>
+      )}
+    </div>
   );
 }
 

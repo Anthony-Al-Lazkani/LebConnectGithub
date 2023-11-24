@@ -31,12 +31,12 @@ const footer = () => {
             </FooterLink>
           </Column>
           <Column>
-          <Heading><Link to="#">Services</Link></Heading>
-            <FooterLink> <Link to ="/news">News</Link>
-              
+            <Heading><Link to="#">Services</Link></Heading>
+            <FooterLink> <Link to="/news">News</Link>
+
             </FooterLink>
-            <FooterLink><Link to ="/tourism">Tourism</Link>
-            
+            <FooterLink><Link to="/tourism">Tourism</Link>
+
             </FooterLink>
             <FooterLink href="#">
               Others
@@ -45,10 +45,10 @@ const footer = () => {
           <Column>
             <Heading><Link to="contactus">Contact Us</Link></Heading>
             <FooterLink href="Questions">
-             Questions
+              Questions
             </FooterLink>
             <FooterLink href="Inquiries">
-             Inquiries
+              Inquiries
             </FooterLink>
             <FooterLink href="For Business">
               For Business

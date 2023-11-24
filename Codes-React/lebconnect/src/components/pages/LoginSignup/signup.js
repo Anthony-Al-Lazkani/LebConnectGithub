@@ -4,6 +4,7 @@ import { AiOutlineMail } from 'react-icons/ai'; // Import icons
 import { BsEye, BsEyeSlash } from 'react-icons/bs';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { motion } from 'framer-motion';
 
 
 function Signup() {
@@ -30,29 +31,30 @@ function Signup() {
             alert('Invalid email format');
             return;
         }
-        if(!passwordRegex.test(password)){
+        if (!passwordRegex.test(password)) {
             alert('Password must be at least 8 characters');
             return;
         }
-    
-    
+
+
         if (password !== password1) {
             alert("Passwords do not match, Please Renconfirm Password");
-            return;}
+            return;
+        }
 
         try {
             await axios.post("http://localhost:8000/signup",
                 { email, firstName, lastName, age, dateofbirth, phonenumber, password, password1 }
             )
                 .then(res => {
-                    if (res.data ==="exist") {
+                    if (res.data === "exist") {
                         alert("User already exists")
                     }
                     else if (res.data.status === "notexist") {
                         const token = res.data.token;
                         localStorage.setItem('token', token);
                         console.log(token);
-                        history("/", { state:{isLoggedin:true} })
+                        history("/", { state: { isLoggedin: true } })
                     }
                 })
                 .catch(e => {
@@ -78,7 +80,24 @@ function Signup() {
 
 
     return (
-        <div className='container'>
+        <motion.div className='container' initial="initialState"
+        animate="animateState"
+        exit="exitState"
+        transition={{
+          type: "tween",
+          duration: 0.5
+        }}
+        variants={{
+          initialState: {
+            opacity: 0
+          },
+          animateState: {
+            opacity: 1
+          },
+          exitState: {
+            opacity: 0
+          }
+        }}>
             <div className='Login-Text'>
                 <h2>Sign Up</h2>
                 <div className='Underline-Signup'></div>
@@ -141,14 +160,14 @@ function Signup() {
                             <Link to="/login" className='Login-Link-reference'>Login</Link> {/* Add this line */}
                         </div>
 
-                    </div> 
-                    <div className='Login-Button-Box'>
-                    <button type='submit' onClick={signup}>Sign Up</button>
                     </div>
-                
+                    <div className='Login-Button-Box'>
+                        <button type='submit' onClick={signup}>Sign Up</button>
+                    </div>
+
                 </div>
             </form>
-        </div>
+        </motion.div>
     );
 }
 

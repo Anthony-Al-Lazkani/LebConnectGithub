@@ -1,14 +1,14 @@
 import React from 'react';
 import './aboutus.css'; // Import your CSS file
 import aboutuspic from '../../images/R.jpg';
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 
 
 function AboutUs() {
 
-    return (
-      <>
-        <motion.div initial="initialState"
+  return (
+    <>
+      <motion.div initial="initialState"
         animate="animateState"
         exit="exitState"
         transition={{
@@ -26,71 +26,71 @@ function AboutUs() {
             opacity: 0
           }
         }}>
-              <section className="about-us">
-                  <img className="Aboutus-Image" src={aboutuspic} alt="Lebanese Bay" />
-                <div className="text">
-                  <h1>About Us</h1>
-                  <hr />
-                  <p>
-                    Welcome to LebConnect, the online home for the vibrant Lebanese community! We are delighted to have you here as a part of our growing online family. Our website was born out of a deep love and appreciation for the Lebanese culture, heritage, and the incredible individuals who make up this diverse community.
-                  </p>
-                  <div className="last-text">
-                    <div className="text1">
-                      <h3>100+</h3>
-                      <h5> Members </h5>
-                      <h3>50+</h3>
-                      <h5> Places </h5>
-                    </div>
-                  </div>
-                </div>
-              </section>
-              <section className="section-white">
-                <div className="container1">
-                  <div className="container-wrapper">
-                    <div className="col-sm-6 col-md-4">
-                      <div className="team-item">
-                        <h3>HISTORY</h3>
-                        <div className="team-info">
-                          <p>
-                            Lebanese students have formed a community</p><p> to inspire  others
-                          to discover Lebanon's beauty and connect with its people.
+        <section className="about-us">
+          <img className="Aboutus-Image" src={aboutuspic} alt="Lebanese Bay" />
+          <div className="text">
+            <h1>About Us</h1>
+            <hr />
+            <p>
+              Welcome to LebConnect, the online home for the vibrant Lebanese community! We are delighted to have you here as a part of our growing online family. Our website was born out of a deep love and appreciation for the Lebanese culture, heritage, and the incredible individuals who make up this diverse community.
+            </p>
+            <div className="last-text">
+              <div className="text1">
+                <h3>100+</h3>
+                <h5> Members </h5>
+                <h3>50+</h3>
+                <h5> Places </h5>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="section-white">
+          <div className="container1">
+            <div className="container-wrapper">
+              <div className="col-sm-6 col-md-4">
+                <div className="team-item">
+                  <h3>HISTORY</h3>
+                  <div className="team-info">
+                    <p>
+                      Lebanese students have formed a community</p><p> to inspire  others
+                        to discover Lebanon's beauty and connect with its people.
                         Through shared experiences and cultural events,
-                            they aim to break barriers,
-                            dispel misconceptions,and create a global network
-                             of unity.</p>
-                             <p> This community invites everyone to experience the warmth of Lebanese hospitality </p>
+                        they aim to break barriers,
+                        dispel misconceptions,and create a global network
+                        of unity.</p>
+                    <p> This community invites everyone to experience the warmth of Lebanese hospitality </p>
 
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-sm-6 col-md-4">
-                      <div className="team-item">
-                        <h3>OUR VALUES</h3>
-                        <div className="team-info">
-                       <p> Rooted in rich heritage, the values of our Lebanese community echo unity, diversity,
-                        and deep cultural pride.We embrace inclusivity, fostering a close-knit family where every member's story
-                        is respected.We</p> <p>share the beauty of our history and traditions, while our commitment
-                         to hospitality creates a welcoming space for all. </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-sm-6 col-md-4">
-                      <div className="team-item">
-                        <h3>WHY JOIN US?</h3>
-                        <div className="team-info">
-                        <p>By becoming a member, you immerse yourself in the heart of Lebanese heritage,participating in cultural events and forging meaningful
-                           connections with like-minded individuals.
-      This community offers a</p><p> platform to break down barriers, dispel misconceptions, and create a global network of unity 
-                       </p>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </div>
-              </section>
-            </motion.div>
-      </>
-    );
+              </div>
+              <div className="col-sm-6 col-md-4">
+                <div className="team-item">
+                  <h3>OUR VALUES</h3>
+                  <div className="team-info">
+                    <p> Rooted in rich heritage, the values of our Lebanese community echo unity, diversity,
+                      and deep cultural pride.We embrace inclusivity, fostering a close-knit family where every member's story
+                      is respected.We</p> <p>share the beauty of our history and traditions, while our commitment
+                        to hospitality creates a welcoming space for all. </p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-sm-6 col-md-4">
+                <div className="team-item">
+                  <h3>WHY JOIN US?</h3>
+                  <div className="team-info">
+                    <p>By becoming a member, you immerse yourself in the heart of Lebanese heritage,participating in cultural events and forging meaningful
+                      connections with like-minded individuals.
+                      This community offers a</p><p> platform to break down barriers, dispel misconceptions, and create a global network of unity
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </motion.div>
+    </>
+  );
 }
 
 export default AboutUs;

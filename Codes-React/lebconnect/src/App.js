@@ -13,8 +13,8 @@ function App() {
 
   return (
     <Router>
-      <Navbar/>
-        <AnimatedRoutes />
+      <Navbar />
+      <AnimatedRoutes />
       <Footer />
     </Router>
   );

@@ -1,5 +1,5 @@
 const express = require("express")
-const { contactus, collection,Article } = require('./mongo');
+const { contactus, collection, Article } = require('./mongo');
 const cors = require("cors")
 const app = express()
 app.use(express.json())
@@ -66,7 +66,7 @@ app.post("/signup", cors(), async (req, res) => {
 });
 app.post('/contactus', cors(), async (req, res) => {
   try {
-    const {issue, email, phonenumber, query } = req.body;
+    const { issue, email, phonenumber, query } = req.body;
 
     await contactus.create({
       issue,
@@ -120,7 +120,7 @@ app.get("/user", cors(), async (req, res) => {
 
     const userData = await collection.findOne({ _id: user.userId });
 
-    res.json({ firstName: userData.firstName, lastName: userData.lastName, age: userData.age, phonenumber: userData.phonenumber, dateofbirth : userData.dateofbirth, email: userData.email });
+    res.json({ firstName: userData.firstName, lastName: userData.lastName, age: userData.age, phonenumber: userData.phonenumber, dateofbirth: userData.dateofbirth, email: userData.email });
   });
 });
 

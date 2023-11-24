@@ -4,6 +4,7 @@ import { AiOutlineMail } from 'react-icons/ai';
 import { BsEye, BsEyeSlash } from 'react-icons/bs';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { motion } from 'framer-motion';
 
 function LoginSignup() {
     const history = useNavigate();
@@ -19,13 +20,13 @@ function LoginSignup() {
         setPasswordVisible(!passwordVisible);
     };
 
-    
+
 
 
     const handleSubmit = (e) => {
         e.preventDefault();
-            login(); // Call login function if the password is valid
-        
+        login(); // Call login function if the password is valid
+
     };
 
     const login = async () => {
@@ -40,12 +41,12 @@ function LoginSignup() {
             });
 
             if (response.data.status === 'exist') {
-                
+
                 const token = response.data.token;
                 setToken(token);
                 localStorage.setItem('token', token);
                 console.log(token);
-                history('/', { state: {isLoggedin:true } });
+                history('/', { state: { isLoggedin: true } });
             } else if (response.data === 'notexist') {
                 alert('User has not signed up yet');
             } else if (response.data === 'incorrectPassword') {
@@ -61,7 +62,24 @@ function LoginSignup() {
 
 
     return (
-        <div className='container-Login'>
+        <motion.div className='container-Login' initial="initialState"
+        animate="animateState"
+        exit="exitState"
+        transition={{
+          type: "tween",
+          duration: 0.5
+        }}
+        variants={{
+          initialState: {
+            opacity: 0
+          },
+          animateState: {
+            opacity: 1
+          },
+          exitState: {
+            opacity: 0
+          }
+        }}>
             <div className='Login-Text-Login'>
                 <h2>Login</h2>
                 <div className='Underline-Login'></div>
@@ -100,7 +118,7 @@ function LoginSignup() {
                 </div>
 
             </div>
-        </div>
+        </motion.div>
     );
 }
 

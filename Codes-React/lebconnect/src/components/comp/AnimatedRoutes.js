@@ -7,7 +7,7 @@ import Tourism from '../pages/Tourism/tourism'; // Corrected here
 import Signup from '../pages/LoginSignup/signup';
 import Login from '../pages/LoginSignup/Login';
 import News from '../pages/News/news';
-import {AnimatePresence} from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
 
 function AnimatedRoutes() {

@@ -1,6 +1,6 @@
 import './navbar.css';
-import React, { useState, useRef,useEffect } from 'react';
-import { Link,useNavigate} from 'react-router-dom';
+import React, { useState, useRef, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { CgProfile } from 'react-icons/cg';
 import User from '../../components/images/user.png';
@@ -15,7 +15,7 @@ function Navbar() {
     const [dateofbirth, setDateOfBirth] = useState('');
     const [phonenumber, setPhoneNumber] = useState('');
     const [email, setEmail] = useState('');
-    const history=useNavigate();
+    const history = useNavigate();
     const NavRef = useRef();
     const ProfRef = useRef();
     const inputRef = useRef(null);
@@ -23,7 +23,7 @@ function Navbar() {
     const location = useLocation();
     const { state } = location;
     const isLoggedIn = state ? state : false;
-    let token=localStorage.getItem('token');
+    let token = localStorage.getItem('token');
     function capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
     }
@@ -31,10 +31,10 @@ function Navbar() {
     function reverseDateFormat(dateofbirth) {
         // Assuming originalDate is in the format "yyyy/mm/dd"
         const parts = dateofbirth.split('-');
-          return `${parts[2]}/${parts[1]}/${parts[0]}`;
+        return `${parts[2]}/${parts[1]}/${parts[0]}`;
     }
 
-    function handlesignout(){
+    function handlesignout() {
         console.log("signing out")
         localStorage.removeItem('token');
         token = null;
@@ -45,8 +45,8 @@ function Navbar() {
         setPhoneNumber('');
         setEmail('');
         history('/');
-      }
-      const getUser = async () => {
+    }
+    const getUser = async () => {
         try {
             const token = localStorage.getItem('token');
             const response = await axios.get('http://localhost:8000/user', {
@@ -66,7 +66,7 @@ function Navbar() {
         }
     };
     useEffect(() => {
-        if (token){
+        if (token) {
             getUser();
 
         }
@@ -112,9 +112,9 @@ function Navbar() {
                             </button>
                             <button className='Profile-Button' onClick={ShowProfile}>
                                 {image ? (
-                                                <img src={URL.createObjectURL(image)} alt='' />
-                                            ) : (
-                                                <img src={User} alt='' />
+                                    <img src={URL.createObjectURL(image)} alt='' />
+                                ) : (
+                                    <img src={User} alt='' />
                                 )}
                             </button>
                             <div className='Profile' ref={ProfRef}>
@@ -129,7 +129,7 @@ function Navbar() {
                                     </div>
                                 </div>
                                 <div className='Info'>
-                                <h2 style={{ color: 'white' }}>Welcome {capitalizeFirstLetter(firstName)} !</h2>
+                                    <h2 style={{ color: 'white' }}>Welcome {capitalizeFirstLetter(firstName)} !</h2>
                                     <div className='Profile-Underline'></div>
                                     <div className='Personal-Information'>
                                         <h3>Personal Information</h3>
