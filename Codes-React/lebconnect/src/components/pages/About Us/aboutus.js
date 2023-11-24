@@ -38,7 +38,8 @@ function AboutUs() {
                   Through shared experiences and cultural events,
                       they aim to break barriers,
                       dispel misconceptions,and create a global network
-                       of unity. This community invites </p> <p>everyone to experience the warmth of Lebanese hospitality </p>
+                       of unity.</p>
+                       <p> This community invites everyone to experience the warmth of Lebanese hospitality </p>
  
                   </div>
                 </div>
@@ -60,8 +61,8 @@ function AboutUs() {
                   <div className="team-info">
                   <p>By becoming a member, you immerse yourself in the heart of Lebanese heritage,participating in cultural events and forging meaningful
                      connections with like-minded individuals.
-This community offers a</p><p> platform to break down barriers, dispel misconceptions, and create a global network of unity.
-                 </p>
+This community offers a</p><p> platform to break down barriers, dispel misconceptions, and create a global network of unity</p>
+                
                   </div>
                 </div>
               </div>
